@@ -27,7 +27,7 @@ const observer = new IntersectionObserver(
       if (!products || !header) return;
 
       const productsTop = products.getBoundingClientRect().top;
-      const triggerPoint = window.innerHeight * 0.1;
+      const triggerPoint = window.innerHeight * 0.5;
 
       header.classList.toggle("show-logo", productsTop <= triggerPoint);
     }
