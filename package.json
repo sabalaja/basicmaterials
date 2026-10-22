@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "dev": "sass --watch scss/style.scss css/style.css",
+    "build": "sass scss/style.scss css/style.css --style=compressed --no-source-map"
+  },
+  "name": "basicmaterials",
+  "version": "1.0.0",
+  "main": "scripts.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.106.1"
+  }
+}
