@@ -1,33 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>basic materials</title>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-
-    <script>
-        function copyLink() {
-          navigator.clipboard.writeText('contact@basicmaterials.studio');
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Basic Materials — objects, materials and experiments.">
+  <title>basic materials</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/main.js" defer></script>
 </head>
-
 <body>
-    <div class="materials-container">
-        <div class="header">
-            <img class="logo" src="./assets/logo.png" alt="basic materials">
-            <h3>website in progress</h3>
-        </div>
-        <div class="opacity"></div>
-        <img class="background" src="./assets/background.jpg">
-        <div class="footer">
-            <a onclick="copyLink()">contact@basicmaterials.studio</a>
-            <a href="https://www.instagram.com/basicmaterials.studio/?utm_source=ig_web_button_share_sheet">@basicmaterials.studio</a>
-        </div>
-    </div>
-</body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Basic Materials — home">
+        <img class="logo small" src="./assets/logo_lime.svg" alt="basic materials logo">
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#products" class="nav-link">products</a>
+      <a href="#about" class="nav-link">about</a>
+      <a href="#contact" class="nav-link">contact</a>
+    </nav>
+  </header>
 
+  <main>
+    <section class="panel panel-home" id="home" aria-labelledby="home-title">
+        <div class="home-content">
+          <img class="logo big" src="./assets/logo.png" alt="basic materials logo">
+        <!-- <img class="logo" src="./assets/logo.png" alt="basic materials logo">
+        <h1 id="home-title">website in progress</h1>
+      </div>
+      <div class="home-footer">
+        <a href="mailto:contact@basicmaterials.studio">contact@basicmaterials.studio</a>
+        <a href="https://www.instagram.com/basicmaterials.studio/" target="_blank" rel="noopener noreferrer">@basicmaterials.studio</a> -->
+      </div>
+    </section>
+
+    <section class="panel panel-products" id="products" aria-labelledby="products-title">
+      <div class="panel-content">
+        <p class="eyebrow">01 / collection</p>
+        <h2 id="products-title">products</h2>
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-image product-image-01">product image 01</div>
+            <h3>basic 001</h3>
+            <p>Coming soon</p>
+          </article>
+          <article class="product-card">
+            <div class="product-image product-image-02">product image 02</div>
+            <h3>basic 002</h3>
+            <p>Coming soon</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel panel-about" id="about" aria-labelledby="about-title">
+      <div class="panel-content text-content">
+        <p class="eyebrow">02 / studio</p>
+        <h2 id="about-title">about</h2>
+        <p>Basic Materials is a studio exploring objects, materials and form.</p>
+        <p>More information coming soon.</p>
+      </div>
+    </section>
+
+    <section class="panel panel-contact" id="contact" aria-labelledby="contact-title">
+      <div class="panel-content text-content">
+        <p class="eyebrow">03 / get in touch</p>
+        <h2 id="contact-title">contact</h2>
+        <a class="contact-email" href="mailto:contact@basicmaterials.studio">contact@basicmaterials.studio</a>
+        <button class="copy-button" type="button" data-copy-email="contact@basicmaterials.studio">copy email</button>
+        <a href="https://www.instagram.com/basicmaterials.studio/" target="_blank" rel="noopener noreferrer">instagram ↗</a>
+        <p class="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+</body>
 </html>

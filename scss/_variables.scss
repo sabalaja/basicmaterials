@@ -1,0 +1,56 @@
+
+ // ==========================================
+ // TYPOGRAPHY
+ // ==========================================
+
+ $font-main: "Courier Prime", monospace;
+
+ $h1_font-size:20px;
+
+$h1_font-weight: 200;
+
+
+ // ==========================================
+ // COLORS
+ // ==========================================
+
+ $color-text: #000000;
+ $color-white: #fff;
+ $color-background: #f2f0ea;
+
+ // Section backgrounds
+ $color-home: #343331;
+ $color-products: #e6e4df;
+ $color-about: #d9d4ca;
+ $color-contact: #c6c1b8;
+
+ // Product placeholders
+ $color-placeholder: #d0cdc5;
+ $color-muted: #666;
+ $color-description: #555;
+
+
+ //MY COLORS
+ $primary-color: #CFE573;
+ $primary-color-rgb: 207, 229, 115;
+ $primary-color-rgba: rgba(207, 229, 115, 0.2);
+
+
+ // ==========================================
+ // LAYOUT
+ // ==========================================
+
+ $header-height: 72px;
+ $mobile-breakpoint: 700px;
+
+ $padding-header: clamp(20px, 5vw, 80px);
+ $padding-panel: clamp(20px, 7vw, 110px);
+
+
+ // ==========================================
+ // EFFECTS
+ // ==========================================
+
+ $header-border: rgba(0, 0, 0, 0.12);
+ $home-overlay: rgba(0, 0, 0, 0.32);
+ $header-blur: 12px;
