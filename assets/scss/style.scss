@@ -204,14 +204,15 @@ h2 {
 
 .logo {
 	display: block;
-	width: min(10vw, 520px);
+	width: min(20vw, 520px);
 	height: auto;
+	
 
 	&.small {
 		@media (max-width: $mobile-breakpoint) {
 			display: none;
 		}
-
+		position: relative;
 		&::before {
 			content: "";
 			position: absolute;
@@ -228,19 +229,32 @@ h2 {
 			backdrop-filter: blur(8px);
 			-webkit-backdrop-filter: blur(8px);
 
-			mask-image: linear-gradient(to bottom,
-					black 0%,
-					black 30%,
-					transparent 100%);
+			// mask-image: linear-gradient(to bottom,
+			// 		black 0%,
+			// 		black 30%,
+			// 		transparent 100%);
 
-			-webkit-mask-image: linear-gradient(to bottom,
-					black 0%,
-					black 30%,
-					transparent 100%);
+			// -webkit-mask-image: linear-gradient(to bottom,
+			// 		black 0%,
+			// 		black 30%,
+			// 		transparent 100%);
 		}
+
 		visibility: hidden;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-12px);
+
+		transition: opacity 1.3s ease,
+		transform 1.3s ease,
+		visibility 1.3s ease;
+
 		&.show-logo {
-			visibility: visible;
+			.brand {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+			}
 		}
 	}
 
