@@ -1,77 +1,251 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Basic Materials — objects, materials and experiments.">
-  <title>basic materials</title>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="./js/main.js" defer></script>
-</head>
-<body>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Basic Materials — home">
-        <img class="logo small" src="./assets/logo_lime.svg" alt="basic materials logo">
-    </a>
-    <nav aria-label="Main navigation">
-      <a href="#products" class="nav-link">products</a>
-      <a href="#about" class="nav-link">about</a>
-      <a href="#contact" class="nav-link">contact</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Basic Materials — objects, materials and experiments."
+    />
+    <title>basic materials</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/main.js" defer></script>
+    <script src="./js/products.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Basic Materials — home">
+        <img
+          class="logo small"
+          src="./assets/logo_lime.svg"
+          alt="basic materials logo"
+        />
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#products" class="nav-link">products</a>
+        <a href="#about" class="nav-link">about</a>
+        <a href="#contact" class="nav-link">contact</a>
+      </nav>
+    </header>
 
-  <main>
-    <section class="panel panel-home" id="home" aria-labelledby="home-title">
+    <main>
+      <section class="panel panel-home" id="home" aria-labelledby="home-title">
         <div class="home-content">
-          <img class="logo big" src="./assets/logo.png" alt="basic materials logo">
-        <!-- <img class="logo" src="./assets/logo.png" alt="basic materials logo">
+          <img
+            class="logo big"
+            src="./assets/logo.png"
+            alt="basic materials logo"
+          />
+          <!-- <img class="logo" src="./assets/logo.png" alt="basic materials logo">
         <h1 id="home-title">website in progress</h1>
       </div>
       <div class="home-footer">
         <a href="mailto:contact@basicmaterials.studio">contact@basicmaterials.studio</a>
         <a href="https://www.instagram.com/basicmaterials.studio/" target="_blank" rel="noopener noreferrer">@basicmaterials.studio</a> -->
-      </div>
-    </section>
-
-    <section class="panel panel-products" id="products" aria-labelledby="products-title">
-      <div class="panel-content">
-        <p class="eyebrow">01 / collection</p>
-        <h2 id="products-title">products</h2>
-        <div class="products-grid">
-          <article class="product-card">
-            <div class="product-image product-image-01">product image 01</div>
-            <h3>basic 001</h3>
-            <p>Coming soon</p>
-          </article>
-          <article class="product-card">
-            <div class="product-image product-image-02">product image 02</div>
-            <h3>basic 002</h3>
-            <p>Coming soon</p>
-          </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="panel panel-about" id="about" aria-labelledby="about-title">
-      <div class="panel-content text-content">
-        <p class="eyebrow">02 / studio</p>
-        <h2 id="about-title">about</h2>
-        <p>Basic Materials is a studio exploring objects, materials and form.</p>
-        <p>More information coming soon.</p>
-      </div>
-    </section>
+      <section
+        class="panel panel-products"
+        id="products"
+        aria-labelledby="products-title"
+      >
+        <div class="panel-content">
+          <p class="eyebrow">01 / collection</p>
+          <h2 id="products-title">products</h2>
+          <div class="products-grid">
+            <article
+              class="product-card"
+              data-product="product-01"
+              role="button"
+              tabindex="0"
+              aria-label="View details of basic 001"
+            >
+              <div class="product-image product-image-01">product image 01</div>
+              <h3>basic 001</h3>
+              <p>Coming soon</p>
+            </article>
 
-    <section class="panel panel-contact" id="contact" aria-labelledby="contact-title">
-      <div class="panel-content text-content">
-        <p class="eyebrow">03 / get in touch</p>
-        <h2 id="contact-title">contact</h2>
-        <a class="contact-email" href="mailto:contact@basicmaterials.studio">contact@basicmaterials.studio</a>
-        <button class="copy-button" type="button" data-copy-email="contact@basicmaterials.studio">copy email</button>
-        <a href="https://www.instagram.com/basicmaterials.studio/" target="_blank" rel="noopener noreferrer">instagram ↗</a>
-        <p class="copy-status" role="status" aria-live="polite"></p>
-      </div>
-    </section>
-  </main>
-</body>
+            <article
+              class="product-card"
+              data-product="product-02"
+              role="button"
+              tabindex="0"
+              aria-label="View details of basic 002"
+            >
+              <div class="product-image product-image-02">product image 02</div>
+              <h3>basic 002</h3>
+              <p>Coming soon</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="panel panel-about"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="panel-content text-content">
+          <p class="eyebrow">02 / studio</p>
+          <h2 id="about-title">about</h2>
+          <p>
+            Basic Materials is a studio exploring objects, materials and form.
+          </p>
+          <p>More information coming soon.</p>
+        </div>
+      </section>
+
+      <section
+        class="panel panel-contact"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="panel-content text-content">
+          <p class="eyebrow">03 / get in touch</p>
+          <h2 id="contact-title">contact</h2>
+          <a class="contact-email" href="mailto:contact@basicmaterials.studio"
+            >contact@basicmaterials.studio</a
+          >
+          <button
+            class="copy-button"
+            type="button"
+            data-copy-email="contact@basicmaterials.studio"
+          >
+            copy email
+          </button>
+          <a
+            href="https://www.instagram.com/basicmaterials.studio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >instagram ↗</a
+          >
+          <p class="copy-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <div class="product-overlay" id="product-overlay" aria-hidden="true">
+      <div class="product-overlay__backdrop"></div>
+
+      <section
+        class="product-detail"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="product-title"
+        tabindex="-1"
+      >
+        <button
+          class="product-detail__close"
+          type="button"
+          aria-label="Close product"
+        >
+          &times;
+        </button>
+
+        <!-- LEFT: IMAGE -->
+        <div class="product-detail__visual">
+          <div class="product-detail__topline">
+            <span>01 · 1:1 SCALE</span>
+            <span>PHOTO / STUDIO</span>
+          </div>
+
+          <div class="product-detail__image">
+            <div class="product-gallery">
+              <img
+                id="product-image"
+                class="product-gallery__image"
+                src=""
+                alt=""
+              />
+
+              <button
+                type="button"
+                class="product-gallery__arrow product-gallery__arrow--prev"
+                aria-label="Previous image"
+              >
+                &#8592;
+              </button>
+
+              <button
+                type="button"
+                class="product-gallery__arrow product-gallery__arrow--next"
+                aria-label="Next image"
+              >
+                &#8594;
+              </button>
+
+              <div class="product-gallery__counter">
+                <span id="gallery-current">01</span>
+                <span>/</span>
+                <span id="gallery-total">01</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-detail__bottomline">
+            <span>BASIC MATERIALS</span>
+            <span id="product-reference">001 / 2026</span>
+          </div>
+        </div>
+
+        <!-- RIGHT: INFORMATION -->
+        <div class="product-detail__information">
+          <div class="product-detail__heading">
+            <span class="product-detail__category">
+              <span class="status-dot"></span>
+              OBJECTS / COLLECTION
+            </span>
+
+            <h2 id="product-title"></h2>
+
+            <p id="product-description"></p>
+          </div>
+
+          <div class="product-detail__bottom">
+            <div class="product-detail__specs">
+              <div class="spec">
+                <span>SKU</span>
+                <strong id="product-sku"></strong>
+              </div>
+
+              <div class="spec">
+                <span>MATERIAL</span>
+                <strong id="product-material"></strong>
+              </div>
+
+              <div class="spec">
+                <span>DIMENSIONS</span>
+                <strong id="product-dimensions"></strong>
+              </div>
+
+              <div class="spec">
+                <span>ORIGIN</span>
+                <strong id="product-origin"></strong>
+              </div>
+            </div>
+
+            <div class="product-detail__purchase">
+              <div>
+                <span>UNIT / PRICE</span>
+                <p id="product-price"></p>
+              </div>
+
+              <a
+                id="product-enquiry"
+                href="mailto:contact@basicmaterials.studio"
+                class="product-detail__cta"
+              >
+                ENQUIRE ABOUT PRODUCT ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>

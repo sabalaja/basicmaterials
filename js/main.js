@@ -1,48 +1,56 @@
+
 const navLinks = [...document.querySelectorAll(".nav-link")];
 const sections = [...document.querySelectorAll("main > section[id]")];
 const header = document.querySelector(".small");
+const products = document.querySelector("#products");
 
-// Observe sections and update navigation + logo visibility
-const observer = new IntersectionObserver(
-  (entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+// Update active navigation and logo visibility
+function updateOnScroll() {
+  // Active navigation
+  const viewportCenter = window.innerHeight * 0.5;
 
-    if (!visible.length) return;
+  const activeSection = sections.find((section) => {
+    const rect = section.getBoundingClientRect();
 
-    const activeId = visible[0].target.id;
+    return rect.top <= viewportCenter &&
+           rect.bottom > viewportCenter;
+  });
 
-    // Update active navigation link
+  if (activeSection) {
     navLinks.forEach((link) => {
-      if (link.getAttribute("href") === `#${activeId}`) {
+      const isActive =
+        link.getAttribute("href") === `#${activeSection.id}`;
+
+      if (isActive) {
         link.setAttribute("aria-current", "page");
       } else {
         link.removeAttribute("aria-current");
       }
     });
-    const products = document.querySelector("#products");
+  }
 
-    function updateLogoVisibility() {
-      if (!products || !header) return;
+  // Logo visibility
+  if (products && header) {
+    const productsTop = products.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight * 0.5;
 
-      const productsTop = products.getBoundingClientRect().top;
-      const triggerPoint = window.innerHeight * 0.5;
+    header.classList.toggle(
+      "show-logo",
+      productsTop <= triggerPoint
+    );
+  }
+}
 
-      header.classList.toggle("show-logo", productsTop <= triggerPoint);
-    }
+// One scroll handler for both features
+window.addEventListener("scroll", updateOnScroll, {
+  passive: true,
+});
 
-    window.addEventListener("scroll", updateLogoVisibility, { passive: true });
-    window.addEventListener("resize", updateLogoVisibility);
+window.addEventListener("resize", updateOnScroll);
 
-    updateLogoVisibility();
-  },
-  {
-    threshold: [0, 0.25, 0.5, 0.75],
-  },
-);
+// Initialize on page load
+updateOnScroll();
 
-sections.forEach((section) => observer.observe(section));
 
 // Copy email
 const copyButton = document.querySelector("[data-copy-email]");
@@ -51,6 +59,7 @@ const copyStatus = document.querySelector(".copy-status");
 copyButton?.addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(copyButton.dataset.copyEmail);
+
     if (copyStatus) {
       copyStatus.textContent = "Email copied to clipboard.";
     }
