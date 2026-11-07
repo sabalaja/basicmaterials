@@ -15,6 +15,18 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/main.js" defer></script>
     <script src="./js/products.js" defer></script>
+    <script src="./js/contact.js" defer></script>
+    <script src="./js/glitch.js" defer></script>
+    <link rel="stylesheet" href="/assets/product-3d/product-3d.css" />
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/"
+        }
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -65,7 +77,7 @@
               tabindex="0"
               aria-label="View details of basic 001"
             >
-              <div class="product-image product-image-01">product image 01</div>
+              <div class="product-image product-image-01"></div>
               <h3>basic 001</h3>
               <p>Coming soon</p>
             </article>
@@ -77,7 +89,7 @@
               tabindex="0"
               aria-label="View details of basic 002"
             >
-              <div class="product-image product-image-02">product image 02</div>
+              <div class="product-image product-image-02"></div>
               <h3>basic 002</h3>
               <p>Coming soon</p>
             </article>
@@ -98,6 +110,62 @@
           </p>
           <p>More information coming soon.</p>
         </div>
+
+        <div class="panel-content components-animations">
+          <!-- ROCK -->
+          <div class="component-block">
+            <div class="animation-visual">
+              <img
+                src="./assets/info_animations/rock.gif"
+                alt="Rotating rock"
+                class="product-animation"
+              />
+              <div class="glitch-layer glitch-layer--red" aria-hidden="true">
+                <img src="./assets/info_animations/rock.gif" alt="" />
+              </div>
+              <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
+                <img src="./assets/info_animations/rock.gif" alt="" />
+              </div>
+            </div>
+            <p class="animation-caption">rock</p>
+          </div>
+
+          <!-- WATER -->
+          <div class="component-block">
+            <div class="animation-visual">
+              <img
+                src="./assets/info_animations/water.gif"
+                alt="Rotating water"
+                class="product-animation"
+              />
+              <div class="glitch-layer glitch-layer--red" aria-hidden="true">
+                <img src="./assets/info_animations/water.gif" alt="" />
+              </div>
+              <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
+                <img src="./assets/info_animations/water.gif" alt="" />
+              </div>
+            </div>
+            <p class="animation-caption">water</p>
+          </div>
+
+          <!-- GLASS -->
+          <div class="component-block">
+            <div class="animation-visual">
+              <img
+                src="./assets/info_animations/glass.gif"
+                alt="Rotating glass"
+                class="product-animation"
+              />
+              <div class="glitch-layer glitch-layer--red" aria-hidden="true">
+                <img src="./assets/info_animations/glass.gif" alt="" />
+              </div>
+              <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
+                <img src="./assets/info_animations/glass.gif" alt="" />
+              </div>
+            </div>
+            <p class="animation-caption">glass</p>
+          </div>
+        </div>
       </section>
 
       <section
@@ -108,6 +176,62 @@
         <div class="panel-content text-content">
           <p class="eyebrow">03 / get in touch</p>
           <h2 id="contact-title">contact</h2>
+
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/mljjkglk"
+            method="POST"
+          >
+            <div class="form-field">
+              <label for="contact-name">NAME</label>
+              <input
+                type="text"
+                id="contact-name"
+                name="name"
+                placeholder="Your name"
+                autocomplete="name"
+                maxlength="100"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email">EMAIL</label>
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                placeholder="your@email.com"
+                autocomplete="email"
+                maxlength="254"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">MESSAGE</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                placeholder="Tell us about your project..."
+                maxlength="5000"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <p class="form-privacy">
+              Information about how we process your data:
+              <a href="./privacy.html">Privacy Policy</a>.
+            </p>
+
+            <div class="form-actions">
+              <p id="form-status" role="status" aria-live="polite"></p>
+
+              <button type="submit" class="form-submit">SEND MESSAGE ↗</button>
+            </div>
+          </form>
+
           <a class="contact-email" href="mailto:contact@basicmaterials.studio"
             >contact@basicmaterials.studio</a
           >
@@ -196,14 +320,14 @@
         <!-- RIGHT: INFORMATION -->
         <div class="product-detail__information">
           <div class="product-detail__heading">
-            <span class="product-detail__category">
-              <span class="status-dot"></span>
-              OBJECTS / COLLECTION
-            </span>
+            <span class="product-detail__category"> OBJECTS / COLLECTION </span>
 
             <h2 id="product-title"></h2>
 
             <p id="product-description"></p>
+          </div>
+          <div class="product-details__product-3d">
+            <div class="product-3d" data-product-3d></div>
           </div>
 
           <div class="product-detail__bottom">
@@ -247,5 +371,6 @@
         </div>
       </section>
     </div>
+    <script type="module" src="/assets/product-3d/product-3d.js"></script>
   </body>
 </html>
