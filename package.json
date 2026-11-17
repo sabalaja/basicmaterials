@@ -1,7 +1,11 @@
 {
   "scripts": {
-    "dev": "sass --watch scss/style.scss css/style.css",
-    "build": "sass scss/style.scss css/style.css --style=compressed --no-source-map",
+    "dev": "npm run build && concurrently -k \"npm:watch:css\" \"npm:watch:site\" \"npm:serve\"",
+    "watch:css": "sass --watch scss/style.scss css/style.css",
+    "watch:site": "nodemon --watch index.template.html --watch translations.tsv --watch css --watch js --watch assets --watch scripts/build.mjs --ext html,tsv,css,js,mjs,svg,png,jpg,jpeg,gif,webp,glb,gltf,fbx --delay 300ms --exec \"node scripts/build.mjs\"",
+    "serve": "browser-sync start --server dist --files \"dist/**/*\" --port 3000 --startPath /en/ --no-notify",
+    "build:css": "sass scss/style.scss css/style.css --style=compressed --no-source-map",
+    "build": "npm run build:css && node scripts/build.mjs",
     "translate": "node scripts/translation.mjs"
   },
   "name": "basicmaterials",
@@ -12,6 +16,9 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.5",
+    "nodemon": "^3.1.14",
     "sass": "^1.106.1"
   }
 }

@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="{{meta.description}}"
-    />
+    <meta name="description" content="{{meta.description}}" />
     <title>{{meta.title}}</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
@@ -15,7 +12,9 @@
     <!-- SEO_LINKS -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/i18n.css" />
-    <script id="i18n-dictionary" type="application/json"><!-- I18N_DICTIONARY --></script>
+    <script id="i18n-dictionary" type="application/json">
+      <!-- I18N_DICTIONARY -->
+    </script>
     <script src="/js/i18n.js" defer></script>
     <script src="/js/main.js" defer></script>
     <script src="/js/products.js" defer></script>
@@ -46,7 +45,11 @@
         <a href="#products" class="nav-link">{{nav.products}}</a>
         <a href="#about" class="nav-link">{{nav.about}}</a>
         <a href="#contact" class="nav-link">{{nav.contact}}</a>
-        <span class="language-switcher" role="group" aria-label="{{legal.languageAria}}">
+        <span
+          class="language-switcher"
+          role="group"
+          aria-label="{{legal.languageAria}}"
+        >
           <a href="/en/" lang="en" hreflang="en" data-lang-link="en">EN</a>
           <span aria-hidden="true">/</span>
           <a href="/pl/" lang="pl" hreflang="pl" data-lang-link="pl">PL</a>
@@ -244,15 +247,18 @@
               <a href="#privacy">{{legal.privacyPolicy}}</a>.
             </p> -->
             <p class="form-privacy">
-              {{contact.privacy.controller}}
-              {{contact.privacy.purpose}}
+              {{contact.privacy.controller}} {{contact.privacy.purpose}}
               {{contact.privacy.more}}
-              <a href="#privacy" data-legal="privacy">{{contact.privacy.policyLink}}</a>.
+              <a href="#privacy" data-legal="privacy"
+                >{{contact.privacy.policyLink}}</a
+              >.
             </p>
             <div class="form-actions">
               <p id="form-status" role="status" aria-live="polite"></p>
 
-              <button type="submit" class="form-submit">{{contact.form.submit}}</button>
+              <button type="submit" class="form-submit">
+                {{contact.form.submit}}
+              </button>
             </div>
           </form>
           <!-- TODO: znelźć na to miejsce -->
@@ -275,8 +281,10 @@
           <p class="copy-status" role="status" aria-live="polite"></p>
         </div>
       </section>
-      <a href="#privacy" data-legal="privacy">{{legal.privacyPolicy}}</a>
-      <a href="#terms" data-legal="terms">{{legal.terms}}</a>
+      <footer class="site-footer">
+        <a href="#privacy" data-legal="privacy">{{legal.privacyPolicy}}</a>
+        <a href="#terms" data-legal="terms">{{legal.terms}}</a>
+      </footer>
     </main>
 
     <div class="product-overlay" id="product-overlay" aria-hidden="true">
@@ -336,7 +344,9 @@
         <!-- RIGHT: INFORMATION -->
         <div class="product-detail__information">
           <div class="product-detail__heading">
-            <span class="product-detail__category">{{product.detail.category}}</span>
+            <span class="product-detail__category"
+              >{{product.detail.category}}</span
+            >
 
             <h2 id="product-title"></h2>
             <p id="product-description"></p>
@@ -384,379 +394,136 @@
     </div>
     <script type="module" src="/assets/product-3d/product-3d.js"></script>
 
-<!-- ==========================================
+    <!-- ==========================================
      PRIVACY POLICY PANEL
 ========================================== -->
-<div
-  id="privacy-overlay"
-  class="legal-overlay"
-  aria-hidden="true"
->
-  <div class="legal-overlay__backdrop"></div>
+    <div id="privacy-overlay" class="legal-overlay" aria-hidden="true">
+      <div class="legal-overlay__backdrop"></div>
 
-  <section
-    class="legal-panel"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="privacy-title"
-    tabindex="-1"
-  >
-    <header class="legal-panel__header">
-      <span>{{legal.privacy.kicker}}</span>
-
-      <button
-        class="legal-panel__close"
-        type="button"
-        aria-label="{{legal.privacy.closeAria}}"
+      <section
+        class="legal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="privacy-title"
+        tabindex="-1"
       >
-        {{legal.close}}
-      </button>
-    </header>
-
-    <div class="legal-panel__content">
-      <p class="eyebrow">{{legal.common.eyebrow}}</p>
-      <h2 id="privacy-title">{{legal.privacyPolicy}}</h2>
-
-      <div class="legal-panel__body">
-      {{legal.privacy.body.01}}
-
-
-{{legal.privacy.body.02}}
-
-
-{{legal.privacy.body.03}}
-
-{{legal.privacy.body.04}}
-
-{{legal.privacy.body.05}}
-
-{{legal.privacy.body.06}}
-
-{{legal.privacy.body.07}}
-
-{{legal.privacy.body.08}}
-
-
-
-{{legal.privacy.body.09}}
-
-
-
-{{legal.privacy.body.10}}
-
-
-{{legal.privacy.body.11}}
-
-{{legal.privacy.body.12}}
-
-{{legal.privacy.body.13}}
-
-{{legal.privacy.body.14}}
-
-{{legal.privacy.body.15}}
-
-{{legal.privacy.body.16}}
-
-{{legal.privacy.body.17}}
-
-
-
-{{legal.privacy.body.18}}
-
-
-{{legal.privacy.body.19}}
-
-{{legal.privacy.body.20}}
-
-{{legal.privacy.body.21}}
-
-{{legal.privacy.body.22}}
-
-{{legal.privacy.body.23}}
-
-
-
-{{legal.privacy.body.24}}
-
-
-{{legal.privacy.body.25}}
-
-{{legal.privacy.body.26}}
-
-{{legal.privacy.body.27}}
-
-{{legal.privacy.body.28}}
-
-{{legal.privacy.body.29}}
-
-{{legal.privacy.body.30}}
-
-
-
-{{legal.privacy.body.31}}
-
-
-
-{{legal.privacy.body.32}}
-
-
-{{legal.privacy.body.33}}
-
-{{legal.privacy.body.34}}
-
-{{legal.privacy.body.35}}
-
-{{legal.privacy.body.36}}
-
-{{legal.privacy.body.37}}
-
-
-
-{{legal.privacy.body.38}}
-
-
-{{legal.privacy.body.39}}
-
-{{legal.privacy.body.40}}
-
-{{legal.privacy.body.41}}
-
-{{legal.privacy.body.42}}
-
-{{legal.privacy.body.43}}
-
-{{legal.privacy.body.44}}
-
-{{legal.privacy.body.45}}
-
-
-
-{{legal.privacy.body.46}}
-
-
-
-{{legal.privacy.body.47}}
-
-
-{{legal.privacy.body.48}}
-
-
-
-{{legal.privacy.body.49}}
-
-
-
-{{legal.privacy.body.50}}
-
-
-{{legal.privacy.body.51}}
-
-
-
-{{legal.privacy.body.52}}
-
-
-
-{{legal.privacy.body.53}}
-
-
-{{legal.privacy.body.54}}
-
-
-
-{{legal.privacy.body.55}}
-
-
-{{legal.privacy.body.56}}
-
-
-
-{{legal.privacy.body.57}}
-
-
-      </div>
+        <header class="legal-panel__header">
+          <span>{{legal.privacy.kicker}}</span>
+
+          <button
+            class="legal-panel__close"
+            type="button"
+            aria-label="{{legal.privacy.closeAria}}"
+          >
+            {{legal.close}}
+          </button>
+        </header>
+
+        <div class="legal-panel__content">
+          <p class="eyebrow">{{legal.common.eyebrow}}</p>
+          <h2 id="privacy-title">{{legal.privacyPolicy}}</h2>
+
+          <div class="legal-panel__body">
+            {{legal.privacy.body.01}} {{legal.privacy.body.02}}
+            {{legal.privacy.body.03}} {{legal.privacy.body.04}}
+            {{legal.privacy.body.05}} {{legal.privacy.body.06}}
+            {{legal.privacy.body.07}} {{legal.privacy.body.08}}
+            {{legal.privacy.body.09}} {{legal.privacy.body.10}}
+            {{legal.privacy.body.11}} {{legal.privacy.body.12}}
+            {{legal.privacy.body.13}} {{legal.privacy.body.14}}
+            {{legal.privacy.body.15}} {{legal.privacy.body.16}}
+            {{legal.privacy.body.17}} {{legal.privacy.body.18}}
+            {{legal.privacy.body.19}} {{legal.privacy.body.20}}
+            {{legal.privacy.body.21}} {{legal.privacy.body.22}}
+            {{legal.privacy.body.23}} {{legal.privacy.body.24}}
+            {{legal.privacy.body.25}} {{legal.privacy.body.26}}
+            {{legal.privacy.body.27}} {{legal.privacy.body.28}}
+            {{legal.privacy.body.29}} {{legal.privacy.body.30}}
+            {{legal.privacy.body.31}} {{legal.privacy.body.32}}
+            {{legal.privacy.body.33}} {{legal.privacy.body.34}}
+            {{legal.privacy.body.35}} {{legal.privacy.body.36}}
+            {{legal.privacy.body.37}} {{legal.privacy.body.38}}
+            {{legal.privacy.body.39}} {{legal.privacy.body.40}}
+            {{legal.privacy.body.41}} {{legal.privacy.body.42}}
+            {{legal.privacy.body.43}} {{legal.privacy.body.44}}
+            {{legal.privacy.body.45}} {{legal.privacy.body.46}}
+            {{legal.privacy.body.47}} {{legal.privacy.body.48}}
+            {{legal.privacy.body.49}} {{legal.privacy.body.50}}
+            {{legal.privacy.body.51}} {{legal.privacy.body.52}}
+            {{legal.privacy.body.53}} {{legal.privacy.body.54}}
+            {{legal.privacy.body.55}} {{legal.privacy.body.56}}
+            {{legal.privacy.body.57}}
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
-</div>
 
-
-<!-- ==========================================
+    <!-- ==========================================
      TERMS & CONDITIONS PANEL
 ========================================== -->
-<div
-  id="terms-overlay"
-  class="legal-overlay"
-  aria-hidden="true"
->
-  <div class="legal-overlay__backdrop"></div>
+    <div id="terms-overlay" class="legal-overlay" aria-hidden="true">
+      <div class="legal-overlay__backdrop"></div>
 
-  <section
-    class="legal-panel"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="terms-title"
-    tabindex="-1"
-  >
-    <header class="legal-panel__header">
-      <span>{{legal.terms.kicker}}</span>
-
-      <button
-        class="legal-panel__close"
-        type="button"
-        aria-label="{{legal.terms.closeAria}}"
+      <section
+        class="legal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="terms-title"
+        tabindex="-1"
       >
-        {{legal.close}}
-      </button>
-    </header>
-
-    <div class="legal-panel__content">
-      <p class="eyebrow">{{legal.common.eyebrow}}</p>
-      <h2 id="terms-title">{{legal.terms}}</h2>
-
-      <div class="legal-panel__body">
-       {{legal.terms.body.01}}
-
-
-{{legal.terms.body.02}}
-{{legal.terms.body.03}}
-
-{{legal.terms.body.04}}
-
-{{legal.terms.body.05}}
-
-{{legal.terms.body.06}}
-
-{{legal.terms.body.07}}
-
-{{legal.terms.body.08}}
-
-{{legal.terms.body.09}}
-
-{{legal.terms.body.10}}
-
-{{legal.terms.body.11}}
-
-
-
-{{legal.terms.body.12}}
-{{legal.terms.body.13}}
-
-{{legal.terms.body.14}}
-
-{{legal.terms.body.15}}
-
-{{legal.terms.body.16}}
-
-{{legal.terms.body.17}}
-
-
-
-{{legal.terms.body.18}}
-{{legal.terms.body.19}}
-
-{{legal.terms.body.20}}
-
-{{legal.terms.body.21}}
-
-{{legal.terms.body.22}}
-
-{{legal.terms.body.23}}
-
-{{legal.terms.body.24}}
-
-
-
-{{legal.terms.body.25}}
-{{legal.terms.body.26}}
-
-{{legal.terms.body.27}}
-
-{{legal.terms.body.28}}
-
-{{legal.terms.body.29}}
-
-{{legal.terms.body.30}}
-
-
-
-{{legal.terms.body.31}}
-{{legal.terms.body.32}}
-
-{{legal.terms.body.33}}
-
-{{legal.terms.body.34}}
-
-{{legal.terms.body.35}}
-
-{{legal.terms.body.36}}
-
-{{legal.terms.body.37}}
-
-
-
-{{legal.terms.body.38}}
-{{legal.terms.body.39}}
-
-{{legal.terms.body.40}}
-
-{{legal.terms.body.41}}
-
-{{legal.terms.body.42}}
-
-{{legal.terms.body.43}}
-
-{{legal.terms.body.44}}
-
-
-
-{{legal.terms.body.45}}
-{{legal.terms.body.46}}
-
-{{legal.terms.body.47}}
-
-{{legal.terms.body.48}}
-
-{{legal.terms.body.49}}
-
-{{legal.terms.body.50}}
-
-{{legal.terms.body.51}}
-
-{{legal.terms.body.52}}
-
-{{legal.terms.body.53}}
-
-
-
-{{legal.terms.body.54}}
-{{legal.terms.body.55}}
-
-{{legal.terms.body.56}}
-
-{{legal.terms.body.57}}
-
-{{legal.terms.body.58}}
-
-{{legal.terms.body.59}}
-
-{{legal.terms.body.60}}
-
-
-
-{{legal.terms.body.61}}
-{{legal.terms.body.62}}
-
-{{legal.terms.body.63}}
-
-{{legal.terms.body.64}}
-
-{{legal.terms.body.65}}
-
-
-      </div>
+        <header class="legal-panel__header">
+          <span>{{legal.terms.kicker}}</span>
+
+          <button
+            class="legal-panel__close"
+            type="button"
+            aria-label="{{legal.terms.closeAria}}"
+          >
+            {{legal.close}}
+          </button>
+        </header>
+
+        <div class="legal-panel__content">
+          <p class="eyebrow">{{legal.common.eyebrow}}</p>
+          <h2 id="terms-title">{{legal.terms}}</h2>
+
+          <div class="legal-panel__body">
+            {{legal.terms.body.01}} {{legal.terms.body.02}}
+            {{legal.terms.body.03}} {{legal.terms.body.04}}
+            {{legal.terms.body.05}} {{legal.terms.body.06}}
+            {{legal.terms.body.07}} {{legal.terms.body.08}}
+            {{legal.terms.body.09}} {{legal.terms.body.10}}
+            {{legal.terms.body.11}} {{legal.terms.body.12}}
+            {{legal.terms.body.13}} {{legal.terms.body.14}}
+            {{legal.terms.body.15}} {{legal.terms.body.16}}
+            {{legal.terms.body.17}} {{legal.terms.body.18}}
+            {{legal.terms.body.19}} {{legal.terms.body.20}}
+            {{legal.terms.body.21}} {{legal.terms.body.22}}
+            {{legal.terms.body.23}} {{legal.terms.body.24}}
+            {{legal.terms.body.25}} {{legal.terms.body.26}}
+            {{legal.terms.body.27}} {{legal.terms.body.28}}
+            {{legal.terms.body.29}} {{legal.terms.body.30}}
+            {{legal.terms.body.31}} {{legal.terms.body.32}}
+            {{legal.terms.body.33}} {{legal.terms.body.34}}
+            {{legal.terms.body.35}} {{legal.terms.body.36}}
+            {{legal.terms.body.37}} {{legal.terms.body.38}}
+            {{legal.terms.body.39}} {{legal.terms.body.40}}
+            {{legal.terms.body.41}} {{legal.terms.body.42}}
+            {{legal.terms.body.43}} {{legal.terms.body.44}}
+            {{legal.terms.body.45}} {{legal.terms.body.46}}
+            {{legal.terms.body.47}} {{legal.terms.body.48}}
+            {{legal.terms.body.49}} {{legal.terms.body.50}}
+            {{legal.terms.body.51}} {{legal.terms.body.52}}
+            {{legal.terms.body.53}} {{legal.terms.body.54}}
+            {{legal.terms.body.55}} {{legal.terms.body.56}}
+            {{legal.terms.body.57}} {{legal.terms.body.58}}
+            {{legal.terms.body.59}} {{legal.terms.body.60}}
+            {{legal.terms.body.61}} {{legal.terms.body.62}}
+            {{legal.terms.body.63}} {{legal.terms.body.64}}
+            {{legal.terms.body.65}}
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
-</div>
-
   </body>
 </html>

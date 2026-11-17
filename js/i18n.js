@@ -1,106 +1,73 @@
-
-const DEFAULT_LANG = "en";
-const SUPPORTED_LANGS = ["pl", "en"];
-
-let currentLang = DEFAULT_LANG;
-const translations = {};
-
-async function loadLanguage(lang) {
-  if (translations[lang]) return;
-
-  const response = await fetch(`./locales/${lang}.json`);
-
-  if (!response.ok) {
-    throw new Error(`Cannot load language: ${lang}`);
-  }
-
-  translations[lang] = await response.json();
-}
-
-function t(token) {
-  return (
-    translations[currentLang]?.[token] ??
-    translations[DEFAULT_LANG]?.[token] ??
-    token
-  );
-}
-
-function translatePage() {
-  const attributes = {
-    "data-i18n": "textContent",
-    "data-i18n-placeholder": "placeholder",
-    "data-i18n-aria-label": "aria-label",
-    "data-i18n-alt": "alt",
-    "data-i18n-content": "content"
-  };
-
-  Object.entries(attributes).forEach(([attr, target]) => {
-    document.querySelectorAll(`[${attr}]`).forEach(el => {
-      const value = t(el.getAttribute(attr));
-
-      if (target === "textContent") {
-        el.textContent = value;
-      } else {
-        el.setAttribute(target, value);
-      }
-    });
-  });
-}
-
-async function setLanguage(lang) {
-  if (!SUPPORTED_LANGS.includes(lang)) return;
-
-  await Promise.all([
-    loadLanguage(DEFAULT_LANG),
-    loadLanguage(lang)
-  ]);
-
-  currentLang = lang;
-  document.documentElement.lang = lang;
-
-  translatePage();
-
-  localStorage.setItem("language", lang);
-
-  document.querySelectorAll("[data-lang]").forEach(button => {
-    button.setAttribute(
-      "aria-pressed",
-      String(button.dataset.lang === lang)
-    );
-  });
-
-  document.dispatchEvent(
-    new CustomEvent("languagechange", {
-      detail: { lang }
-    })
-  );
-}
-
-window.i18n = {
-  t,
-  setLanguage,
-  translatePage
-};
-
-document.addEventListener("DOMContentLoaded", async () => {
-  const savedLang = localStorage.getItem("language");
-  const browserLang = navigator.language.slice(0, 2);
-
-  const initialLang = SUPPORTED_LANGS.includes(savedLang)
-    ? savedLang
-    : SUPPORTED_LANGS.includes(browserLang)
-      ? browserLang
-      : DEFAULT_LANG;
+// Teksty statyczne są tłumaczone podczas builda.
+// Ten moduł obsługuje tłumaczenia w JS oraz nowych elementów dodanych do DOM.
+(() => {
+  const lang = document.documentElement.lang || 'en';
+  const dictionaryElement = document.getElementById('i18n-dictionary');
+  let translations = {};
 
   try {
-    await setLanguage(initialLang);
-  } catch (error) {
-    console.error("Translation error:", error);
+    translations = JSON.parse(dictionaryElement?.textContent || '{}');
+  } catch (err) {
+    console.error('Nie można odczytać tłumaczeń:', err);
   }
 
-  document.querySelectorAll("[data-lang]").forEach(button => {
-    button.addEventListener("click", () => {
-      setLanguage(button.dataset.lang).catch(console.error);
+  function t(token) {
+    if (!Object.hasOwn(translations, token)) {
+      console.warn(`Brak tłumaczenia ${lang}: ${token}`);
+      return token;
+    }
+    return translations[token];
+  }
+
+  function translatePage(root = document) {
+    // Zastępowanie {{token}} w tekstach, bez niszczenia dzieci elementu.
+    const textNodes = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let node;
+    while ((node = textNodes.nextNode())) {
+      if (node.parentElement?.closest('script, style, template, noscript')) continue;
+      if (!node.nodeValue.includes('{{')) continue;
+      node.nodeValue = node.nodeValue.replace(/\{\{\s*([\w.-]+)\s*\}\}/g, (_, key) => t(key));
+    }
+
+    // Atrybuty (placeholder, title, alt, aria-label itd.).
+    const elements = root.nodeType === Node.ELEMENT_NODE
+      ? [root, ...root.querySelectorAll('*')]
+      : [...root.querySelectorAll('*')];
+
+    for (const el of elements) {
+      if (el.matches('script, style, template, noscript')) continue;
+      for (const attr of el.attributes) {
+        if (!attr.value.includes('{{')) continue;
+        el.setAttribute(attr.name, attr.value.replace(
+          /\{\{\s*([\w.-]+)\s*\}\}/g,
+          (_, key) => t(key)
+        ));
+      }
+    }
+  }
+
+  // Linki przełączają adres URL; zachowujemy hash bieżącej sekcji.
+  document.querySelectorAll('[data-lang-link]').forEach((link) => {
+    link.setAttribute('aria-current', link.dataset.langLink === lang ? 'true' : 'false');
+    link.addEventListener('click', () => {
+      try { localStorage.setItem('basic-materials-language', link.dataset.langLink); } catch (_) {}
+      link.href = link.pathname + location.hash;
     });
   });
-});
+
+  window.i18n = { lang, t, translatePage };
+  translatePage();
+
+  // Jeśli products.js lub legal.js doda HTML z {{token}}, również go przetłumacz.
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      for (const node of mutation.addedNodes) {
+        if (node.nodeType === Node.ELEMENT_NODE) translatePage(node);
+        else if (node.nodeType === Node.TEXT_NODE && node.nodeValue.includes('{{')) {
+          node.nodeValue = node.nodeValue.replace(/\{\{\s*([\w.-]+)\s*\}\}/g, (_, key) => t(key));
+        }
+      }
+    }
+  });
+  if (document.body) observer.observe(document.body, { childList: true, subtree: true });
+})();

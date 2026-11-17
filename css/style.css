@@ -976,14 +976,11 @@ body.overlay-open {
   inset: 12px;
   height: calc(100dvh - 24px);
   min-height: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  overflow: hidden;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   color: #181818;
   border-radius: 20px;
   transform: translateX(105%);
-  opacity: 0;
   transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
 }
 .is-open .legal-panel {
@@ -1005,7 +1002,7 @@ body.overlay-open {
   cursor: pointer;
 }
 .legal-panel__content {
-  flex: 1;
+  flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
   padding: 30px 40px 80px;
@@ -1067,6 +1064,21 @@ body.overlay-open {
 }
 .language-switcher button:hover {
   opacity: 1;
+}
+
+.site-footer {
+  height: 60px;
+  inset: 0;
+  background: #CFE573;
+  backdrop-filter: blur(35px) opacity(0.6);
+  -webkit-backdrop-filter: blur(35px);
+  display: flex;
+  justify-content: center;
+}
+.site-footer a {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
