@@ -1,33 +1,766 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Basic Materials — objects, materials and experiments."
+    />
     <title>basic materials</title>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/main.js" defer></script>
+    <script src="./js/i18n.js" defer></script>
+    <script src="./js/products.js" defer></script>
+    <script src="./js/contact.js" defer></script>
+    <script src="./js/glitch.js" defer></script>
+    <script src="./js/legal.js" defer></script>
+    <link rel="stylesheet" href="/assets/product-3d/product-3d.css" />
 
-    <script>
-        function copyLink() {
-          navigator.clipboard.writeText('contact@basicmaterials.studio');
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/"
         }
+      }
     </script>
-</head>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Basic Materials — home">
+        <img
+          class="logo small"
+          src="./assets/logo_lime.svg"
+          alt="basic materials logo"
+        />
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#products" class="nav-link">products</a>
+        <a href="#about" class="nav-link">about</a>
+        <a href="#contact" class="nav-link">contact</a>
+        <div class="language-switcher" role="group"
+     aria-label="Language">
+  <button type="button" data-lang="en">EN</button>
+  <span>/</span>
+  <button type="button" data-lang="pl">PL</button>
+</div>
+      </nav>
+    </header>
 
-<body>
-    <div class="materials-container">
-        <div class="header">
-            <img class="logo" src="./assets/logo.png" alt="basic materials">
-            <h3>website in progress</h3>
+    <main>
+      <section class="panel panel-home" id="home" aria-labelledby="home-title">
+        <div class="home-content">
+          <img
+            class="logo big"
+            src="./assets/logo.png"
+            alt="basic materials logo"
+          />
+          <!-- <img class="logo" src="./assets/logo.png" alt="basic materials logo">
+        <h1 id="home-title">website in progress</h1>
+      </div>
+      <div class="home-footer">
+        <a href="mailto:contact@basicmaterials.studio">contact@basicmaterials.studio</a>
+        <a href="https://www.instagram.com/basicmaterials.studio/" target="_blank" rel="noopener noreferrer">@basicmaterials.studio</a> -->
         </div>
-        <div class="opacity"></div>
-        <img class="background" src="./assets/background.jpg">
-        <div class="footer">
-            <a onclick="copyLink()">contact@basicmaterials.studio</a>
-            <a href="https://www.instagram.com/basicmaterials.studio/?utm_source=ig_web_button_share_sheet">@basicmaterials.studio</a>
+      </section>
+
+      <section
+        class="panel panel-products section-panel"
+        id="products"
+        aria-labelledby="products-title"
+      >
+        <div class="panel-content second-column">
+          <p class="eyebrow">01 / collection</p>
+          <h2 id="products-title">products</h2>
         </div>
+        <div class="panel-content main-view">
+          <div class="products-grid">
+            <article
+              class="product-card"
+              data-product="product-01"
+              role="button"
+              tabindex="0"
+              aria-label="View details of basic 001"
+            >
+              <div class="product-image product-image-01"></div>
+              <h3>basic 001</h3>
+              <p>Coming soon</p>
+            </article>
+
+            <article
+              class="product-card"
+              data-product="product-02"
+              role="button"
+              tabindex="0"
+              aria-label="View details of basic 002"
+            >
+              <div class="product-image product-image-02"></div>
+              <h3>basic 002</h3>
+              <p>Coming soon</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="panel panel-about section-panel"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="panel-content second-column">
+          <p class="eyebrow">02 / studio</p>
+          <h2 id="about-title">about</h2>
+        </div>
+        <div class="main-view">
+          <p>
+            <strong>BASIC MATERIALS</strong>
+          </p>
+          <p>
+            Jesteśmy niezależnym studiem projektowym i producentem autorskich
+            form użytkowych z Krakowa.<br />
+            Łączymy procesy przemysłowe z rzemiosłem, poszukując równowagi
+            między technologią, formą i materiałem.<br />
+            Projektujemy i produkujemy we własnym studio, dbając o każdy etap i
+            detal powstawania produktu.
+          </p>
+          <p>Designed and made in Kraków, Poland.</p>
+          <div class="panel-content components-animations">
+            <!-- ROCK -->
+            <div class="component-block">
+              <div class="animation-visual">
+                <img
+                  src="./assets/info_animations/rock.gif"
+                  alt="Rotating rock"
+                  class="product-animation"
+                />
+                <div class="glitch-layer glitch-layer--red" aria-hidden="true">
+                  <img src="./assets/info_animations/rock.gif" alt="" />
+                </div>
+                <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
+                  <img src="./assets/info_animations/rock.gif" alt="" />
+                </div>
+              </div>
+              <p class="animation-caption">stone</p>
+            </div>
+
+            <!-- WATER -->
+            <div class="component-block">
+              <div class="animation-visual img-smaller">
+                <img
+                  src="./assets/info_animations/water.gif"
+                  alt="Rotating water"
+                  class="product-animation"
+                />
+                <div class="glitch-layer glitch-layer--red" aria-hidden="true">
+                  <img src="./assets/info_animations/water.gif" alt="" />
+                </div>
+                <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
+                  <img src="./assets/info_animations/water.gif" alt="" />
+                </div>
+              </div>
+              <p class="animation-caption">aluminium</p>
+            </div>
+
+            <!-- GLASS -->
+            <div class="component-block">
+              <div class="animation-visual img-smallest">
+                <img
+                  src="./assets/info_animations/glass.gif"
+                  alt="Rotating glass"
+                  class="product-animation"
+                />
+                <div class="glitch-layer glitch-layer--red" aria-hidden="true">
+                  <img src="./assets/info_animations/glass.gif" alt="" />
+                </div>
+                <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
+                  <img src="./assets/info_animations/glass.gif" alt="" />
+                </div>
+              </div>
+              <p class="animation-caption">glass</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="panel panel-contact section-panel"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="panel-content second-column">
+          <p class="eyebrow">03 / get in touch</p>
+          <h2 id="contact-title">contact</h2>
+        </div>
+        <div class="main-view">
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/mljjkglk"
+            method="POST"
+          >
+            <div class="form-field">
+              <label for="contact-name">NAME</label>
+              <input
+                type="text"
+                id="contact-name"
+                name="name"
+                placeholder="Your name"
+                autocomplete="name"
+                maxlength="100"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email">EMAIL</label>
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                placeholder="your@email.com"
+                autocomplete="email"
+                maxlength="254"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">MESSAGE</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                placeholder="Tell us about your project..."
+                maxlength="5000"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <!-- <p class="form-privacy">
+              Information about how we process your data:
+              <a href="./privacy.html">Privacy Policy</a>.
+            </p> -->
+            <p class="form-privacy">
+              Administratorem Twoich danych osobowych jest [NAZWA FIRMY], z
+              siedzibą w [ADRES], NIP: [NIP]. Dane podane w formularzu będą
+              przetwarzane w celu udzielenia odpowiedzi na wiadomość oraz
+              ewentualnego przygotowania i realizacji zamówienia. Więcej
+              informacji na temat przetwarzania danych osobowych,
+              przysługujących Ci praw oraz okresu przechowywania danych
+              znajdziesz w naszej <a href="./privacy.html">Polityce prywatności</a> .
+            </p>
+            <div class="form-actions">
+              <p id="form-status" role="status" aria-live="polite"></p>
+
+              <button type="submit" class="form-submit">SEND MESSAGE ↗</button>
+            </div>
+          </form>
+          <!-- TODO: znelźć na to miejsce -->
+          <!-- <a class="contact-email" href="mailto:contact@basicmaterials.studio"
+            >contact@basicmaterials.studio</a
+          >
+          <button
+            class="copy-button"
+            type="button"
+            data-copy-email="contact@basicmaterials.studio"
+          >
+            copy email
+          </button>
+          <a
+            href="https://www.instagram.com/basicmaterials.studio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >instagram ↗</a
+          > -->
+          <p class="copy-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+      <a href="#privacy" data-legal="privacy">Privacy Policy</a>
+      <a href="#terms" data-legal="terms">Terms & Conditions</a>
+    </main>
+
+    <div class="product-overlay" id="product-overlay" aria-hidden="true">
+      <div class="product-overlay__backdrop"></div>
+
+      <section
+        class="product-detail"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="product-title"
+        tabindex="-1"
+      >
+        <button
+          class="product-detail__close"
+          type="button"
+          aria-label="Close product"
+        >
+          &times;
+        </button>
+
+        <!-- LEFT: IMAGE -->
+        <div class="product-detail__visual">
+          <div class="product-detail__image">
+            <div class="product-gallery">
+              <img
+                id="product-image"
+                class="product-gallery__image"
+                src=""
+                alt=""
+              />
+
+              <button
+                type="button"
+                class="product-gallery__arrow product-gallery__arrow--prev"
+                aria-label="Previous image"
+              >
+                &#8592;
+              </button>
+
+              <button
+                type="button"
+                class="product-gallery__arrow product-gallery__arrow--next"
+                aria-label="Next image"
+              >
+                &#8594;
+              </button>
+
+              <div class="product-gallery__counter">
+                <span id="gallery-current">01</span>
+                <span>/</span>
+                <span id="gallery-total">01</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: INFORMATION -->
+        <div class="product-detail__information">
+          <div class="product-detail__heading">
+            <span class="product-detail__category"> / PRODUCT</span>
+
+            <h2 id="product-title"></h2>
+            <p id="product-description"></p>
+          </div>
+          <div class="product-detail__product-3d">
+            <div class="product-3d" data-product-3d></div>
+          </div>
+
+          <div class="product-detail__bottom">
+            <div class="product-detail__specs">
+              <div class="spec">
+                <span>SKU</span>
+                <strong id="product-sku"></strong>
+              </div>
+
+              <div class="spec">
+                <span>DIMENSIONS</span>
+                <strong id="product-dimensions"></strong>
+              </div>
+
+              <div class="spec">
+                <span>COLLECTION</span>
+                <strong id="product-material"></strong>
+              </div>
+
+              <div class="spec">
+                <span>DATE OF RELEASE</span>
+                <strong id="product-origin"></strong>
+              </div>
+            </div>
+
+            <div class="product-detail__purchase">
+              <div>
+                <span>UNIT / PRICE</span>
+                <p id="product-price"></p>
+              </div>
+
+              <a id="product-contact-btn" class="product-detail__cta">
+                ENQUIRE ABOUT PRODUCT ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-</body>
+    <script type="module" src="/assets/product-3d/product-3d.js"></script>
 
+<!-- ==========================================
+     PRIVACY POLICY PANEL
+========================================== -->
+<div
+  id="privacy-overlay"
+  class="legal-overlay"
+  aria-hidden="true"
+>
+  <div class="legal-overlay__backdrop"></div>
+
+  <section
+    class="legal-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="privacy-title"
+    tabindex="-1"
+  >
+    <header class="legal-panel__header">
+      <span>LEGAL / 01</span>
+
+      <button
+        class="legal-panel__close"
+        type="button"
+        aria-label="Close privacy policy"
+      >
+        CLOSE ×
+      </button>
+    </header>
+
+    <div class="legal-panel__content">
+      <p class="eyebrow">BASIC MATERIALS / LEGAL</p>
+      <h2 id="privacy-title">privacy policy</h2>
+
+      <div class="legal-panel__body">
+      POLITYKA PRYWATNOŚCI
+
+
+1. Administrator danych osobowych
+
+
+Administratorem danych osobowych osób korzystających ze strony internetowej [ADRES STRONY] jest:
+
+Nazwa firmy: [NAZWA FIRMY]
+
+Właściciel: [IMIĘ I NAZWISKO]
+
+Adres: [ADRES FIRMY]
+
+NIP: [NIP]
+
+Adres e-mail: [ADRES E-MAIL]
+
+
+
+Administrator odpowiada za przetwarzanie danych osobowych zgodnie z obowiązującymi przepisami, w szczególności rozporządzeniem RODO.
+
+
+
+2. Jakie dane są przetwarzane?
+
+
+Administrator może przetwarzać następujące dane osobowe:
+
+imię i nazwisko,
+
+adres poczty elektronicznej,
+
+numer telefonu, jeżeli zostanie podany,
+
+adres dostawy,
+
+treść wiadomości przesłanej za pośrednictwem formularza kontaktowego,
+
+inne dane przekazane dobrowolnie przez Klienta w związku z zamówieniem.
+
+
+
+3. Cele i podstawy przetwarzania danych
+
+
+Dane osobowe przetwarzane są w następujących celach:
+
+Udzielanie odpowiedzi na wiadomości przesłane przez formularz kontaktowy lub pocztę elektroniczną – na podstawie art. 6 ust. 1 lit. f RODO, czyli prawnie uzasadnionego interesu Administratora.
+
+Przygotowanie i realizacja zamówień – na podstawie art. 6 ust. 1 lit. b RODO.
+
+Realizacja obowiązków księgowych i podatkowych – na podstawie art. 6 ust. 1 lit. c RODO.
+
+Ustalenie, dochodzenie lub obrona przed ewentualnymi roszczeniami – na podstawie art. 6 ust. 1 lit. f RODO.
+
+
+
+4. Odbiorcy danych
+
+
+Dane osobowe mogą być przekazywane podmiotom współpracującym z Administratorem w zakresie niezbędnym do realizacji zamówienia lub obsługi strony internetowej, w szczególności:
+
+firmom kurierskim realizującym dostawę,
+
+dostawcom usług poczty elektronicznej,
+
+dostawcom usług hostingowych,
+
+biuru rachunkowemu, jeżeli obsługuje Administratora,
+
+podmiotom świadczącym usługi informatyczne, jeżeli mają dostęp do danych.
+
+
+
+Dane nie są sprzedawane innym podmiotom.
+
+
+
+5. Okres przechowywania danych
+
+
+Dane osobowe przechowywane są:
+
+przez czas niezbędny do obsługi zapytania przesłanego przez formularz kontaktowy,
+
+przez czas realizacji zamówienia oraz okres niezbędny do obsługi ewentualnych reklamacji,
+
+przez okres wymagany przepisami prawa podatkowego i rachunkowego w przypadku dokumentacji związanej ze sprzedażą,
+
+do czasu przedawnienia ewentualnych roszczeń w przypadku danych przetwarzanych w celu ich dochodzenia lub obrony.
+
+
+
+6. Prawa osób, których dane dotyczą
+
+
+Każdej osobie, której dane są przetwarzane, przysługuje prawo do:
+
+dostępu do swoich danych,
+
+sprostowania danych,
+
+usunięcia danych, jeżeli istnieją ku temu podstawy prawne,
+
+ograniczenia przetwarzania,
+
+przenoszenia danych, jeżeli ma zastosowanie,
+
+wniesienia sprzeciwu wobec przetwarzania danych opartego na prawnie uzasadnionym interesie.
+
+
+
+Osobie, której dane dotyczą, przysługuje również prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych.
+
+
+
+7. Dobrowolność podania danych
+
+
+Podanie danych osobowych jest dobrowolne, jednak może być niezbędne do udzielenia odpowiedzi na zapytanie, przygotowania zamówienia lub jego realizacji.
+
+
+
+Niepodanie danych niezbędnych do realizacji zamówienia może uniemożliwić jego wykonanie.
+
+
+
+8. Pliki cookies
+
+
+Strona internetowa nie wykorzystuje plików cookies w celach marketingowych ani analitycznych.
+
+
+
+Jeżeli w przyszłości zostaną wdrożone dodatkowe technologie wykorzystujące pliki cookies lub podobne rozwiązania, informacje dotyczące ich stosowania zostaną odpowiednio zaktualizowane.
+
+
+
+9. Bezpieczeństwo danych
+
+
+Administrator stosuje odpowiednie środki techniczne i organizacyjne mające na celu ochronę danych osobowych przed ich utratą, nieuprawnionym dostępem, ujawnieniem lub zniszczeniem.
+
+
+
+10. Postanowienia końcowe
+
+
+Administrator zastrzega sobie prawo do aktualizacji niniejszej polityki prywatności w przypadku zmian przepisów prawa lub sposobu funkcjonowania strony internetowej.
+
+
+
+Polityka prywatności obowiązuje od dnia [DATA].
+
+
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ==========================================
+     TERMS & CONDITIONS PANEL
+========================================== -->
+<div
+  id="terms-overlay"
+  class="legal-overlay"
+  aria-hidden="true"
+>
+  <div class="legal-overlay__backdrop"></div>
+
+  <section
+    class="legal-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="terms-title"
+    tabindex="-1"
+  >
+    <header class="legal-panel__header">
+      <span>LEGAL / 02</span>
+
+      <button
+        class="legal-panel__close"
+        type="button"
+        aria-label="Close terms and conditions"
+      >
+        CLOSE ×
+      </button>
+    </header>
+
+    <div class="legal-panel__content">
+      <p class="eyebrow">BASIC MATERIALS / LEGAL</p>
+      <h2 id="terms-title">terms & conditions</h2>
+
+      <div class="legal-panel__body">
+       REGULAMIN SPRZEDAŻY I ŚWIADCZENIA USŁUG DROGĄ ELEKTRONICZNĄ
+
+
+§ 1. Postanowienia ogólne
+Niniejszy regulamin określa zasady korzystania ze strony internetowej [ADRES STRONY], składania zamówień na produkty rękodzielnicze oraz warunki sprzedaży.
+
+Właścicielem i administratorem strony internetowej jest:
+
+Nazwa firmy: [NAZWA FIRMY]
+
+Właściciel: [IMIĘ I NAZWISKO]
+
+Adres siedziby: [ADRES]
+
+NIP: [NIP]
+
+Adres e-mail: [ADRES E-MAIL]
+
+Regulamin jest udostępniony nieodpłatnie na stronie internetowej w sposób umożliwiający jego odczytanie, pobranie i zapisanie.
+
+Kontakt ze Sprzedawcą odbywa się za pośrednictwem poczty elektronicznej lub formularza kontaktowego dostępnego na stronie.
+
+
+
+§ 2. Produkty
+Przedmiotem sprzedaży są produkty rękodzielnicze wykonywane ręcznie przez Sprzedawcę.
+
+Produkty prezentowane na stronie internetowej przedstawiają przykładowy wygląd oferowanych wyrobów.
+
+Ze względu na ręczny sposób wykonania poszczególne egzemplarze mogą nieznacznie różnić się od siebie, w szczególności odcieniem, fakturą lub drobnymi detalami wykonania.
+
+Różnice wynikające z ręcznego charakteru produktu nie stanowią same w sobie niezgodności towaru z umową, o ile produkt odpowiada uzgodnionemu opisowi i właściwościom.
+
+Sprzedawca umożliwia również realizację indywidualnych projektów na podstawie uzgodnień z Klientem.
+
+
+
+§ 3. Składanie zamówień
+Zamówienia przyjmowane są za pośrednictwem formularza kontaktowego dostępnego na stronie internetowej lub drogą mailową.
+
+W celu złożenia zamówienia Klient wskazuje wybrany produkt oraz przekazuje dane niezbędne do kontaktu i realizacji zamówienia.
+
+W przypadku zamówień indywidualnych szczegóły projektu, jego wygląd, zakres oraz cena ustalane są indywidualnie drogą mailową.
+
+Po otrzymaniu zgłoszenia Sprzedawca kontaktuje się z Klientem w celu potwierdzenia dostępności produktu, ceny, warunków realizacji oraz sposobu płatności.
+
+Umowa sprzedaży zostaje zawarta po uzgodnieniu wszystkich istotnych warunków zamówienia i otrzymaniu przez Klienta potwierdzenia przyjęcia zamówienia przez Sprzedawcę.
+
+Samo wysłanie formularza kontaktowego nie jest równoznaczne z zawarciem umowy sprzedaży.
+
+
+
+§ 4. Ceny i płatności
+Ceny produktów prezentowane na stronie internetowej podawane są w złotych polskich (PLN).
+
+Cena produktu obejmuje koszt dostawy kurierskiej.
+
+Płatność za zamówienie dokonywana jest z góry przelewem bankowym na rachunek wskazany przez Sprzedawcę.
+
+Dane do przelewu przekazywane są Klientowi drogą mailową po potwierdzeniu zamówienia.
+
+Zamówienie kierowane jest do realizacji po zaksięgowaniu płatności na rachunku Sprzedawcy.
+
+
+
+§ 5. Realizacja zamówień i dostawa
+Produkty wykonywane są ręcznie, dlatego czas realizacji zamówienia może być dłuższy niż w przypadku produktów dostępnych od ręki.
+
+Standardowy czas realizacji wynosi do 4 tygodni od dnia zaksięgowania płatności na rachunku Sprzedawcy.
+
+Czas realizacji obejmuje wykonanie produktu oraz przygotowanie go do wysyłki.
+
+Dostawa realizowana jest za pośrednictwem firmy kurierskiej na adres wskazany przez Klienta.
+
+Koszt dostawy kurierskiej jest wliczony w cenę produktu.
+
+Klient zostanie poinformowany drogą mailową o ewentualnych okolicznościach mogących wpłynąć na termin realizacji zamówienia.
+
+
+
+§ 6. Prawo odstąpienia od umowy
+Klient będący konsumentem ma prawo odstąpić od umowy zawartej na odległość w terminie 14 dni bez podawania przyczyny, z zastrzeżeniem wyjątków przewidzianych w obowiązujących przepisach prawa.
+
+Termin do odstąpienia od umowy rozpoczyna się od dnia objęcia produktu w posiadanie przez konsumenta lub wskazaną przez niego osobę trzecią inną niż przewoźnik.
+
+Aby skorzystać z prawa odstąpienia, Klient powinien poinformować Sprzedawcę o swojej decyzji poprzez jednoznaczne oświadczenie przesłane pocztą elektroniczną lub listownie.
+
+W przypadku skutecznego odstąpienia od umowy Sprzedawca zwraca otrzymane płatności zgodnie z obowiązującymi przepisami.
+
+Prawo odstąpienia od umowy nie przysługuje w przypadku produktów nieprefabrykowanych, wykonanych według specyfikacji konsumenta lub służących zaspokojeniu jego zindywidualizowanych potrzeb, zgodnie z art. 38 ust. 1 pkt 3 ustawy o prawach konsumenta.
+
+Wyłączenie prawa odstąpienia dotyczy wyłącznie produktów spełniających ustawowe przesłanki i nie obejmuje automatycznie wszystkich produktów wykonywanych ręcznie.
+
+
+
+§ 7. Reklamacje
+Sprzedawca ponosi odpowiedzialność za zgodność towaru z umową na zasadach określonych w obowiązujących przepisach prawa.
+
+W przypadku stwierdzenia niezgodności towaru z umową Klient ma prawo złożyć reklamację.
+
+Reklamację można zgłosić:
+
+drogą mailową na adres: [ADRES E-MAIL],
+
+listownie na adres siedziby Sprzedawcy.
+
+Reklamacja powinna zawierać opis problemu oraz dane umożliwiające kontakt z Klientem. Dołączenie zdjęć może ułatwić rozpatrzenie reklamacji, ale nie jest obowiązkowe.
+
+Sprzedawca rozpatruje reklamację w terminie 14 dni od jej otrzymania.
+
+Uprawnienia Klienta wynikające z przepisów dotyczących niezgodności towaru z umową nie są ograniczone niniejszym regulaminem.
+
+
+
+§ 8. Usługi świadczone drogą elektroniczną
+Za pośrednictwem strony internetowej Sprzedawca świadczy nieodpłatnie usługę umożliwiającą kontakt za pomocą formularza kontaktowego.
+
+Korzystanie z formularza wymaga urządzenia z dostępem do Internetu oraz aktualnej przeglądarki internetowej.
+
+Klient zobowiązany jest do korzystania ze strony w sposób zgodny z prawem i dobrymi obyczajami.
+
+Zabronione jest przesyłanie za pośrednictwem formularza treści bezprawnych.
+
+Reklamacje dotyczące funkcjonowania formularza kontaktowego można zgłaszać na adres e-mail Sprzedawcy.
+
+Sprzedawca rozpatruje reklamacje dotyczące usług elektronicznych w terminie 14 dni.
+
+
+
+§ 9. Postanowienia końcowe
+W sprawach nieuregulowanych niniejszym regulaminem zastosowanie mają przepisy prawa polskiego.
+
+Żadne postanowienie regulaminu nie ogranicza praw konsumentów wynikających z bezwzględnie obowiązujących przepisów prawa.
+
+Regulamin obowiązuje od dnia [DATA].
+
+Sprzedawca zastrzega sobie prawo do zmiany regulaminu z ważnych przyczyn prawnych lub organizacyjnych. Zmiany nie naruszają praw nabytych Klientów.
+
+
+      </div>
+    </div>
+  </section>
+</div>
+
+  </body>
 </html>
