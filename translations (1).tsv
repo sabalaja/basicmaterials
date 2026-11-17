@@ -1,0 +1,184 @@
+TOKEN	TLUMACZENIE_POLSKIE	TLUMACZENIE_ANGIELSKIE
+meta.title	basic materials	basic materials
+meta.description	Basic Materials — obiekty, materiały i eksperymenty.	Basic Materials — objects, materials and experiments.
+brand.name	BASIC MATERIALS	BASIC MATERIALS
+header.homeAria	Basic Materials — strona główna	Basic Materials — home
+header.logoAlt	logo basic materials	basic materials logo
+nav.ariaLabel	Nawigacja główna	Main navigation
+nav.products	produkty	products
+nav.about	o nas	about
+nav.contact	kontakt	contact
+section.products.eyebrow	01 / kolekcja	01 / collection
+product.basic001.title	basic 001	basic 001
+product.basic002.title	basic 002	basic 002
+product.comingSoon	Wkrótce	Coming soon
+product.basic001.ariaLabel	Zobacz szczegóły basic 001	View details of basic 001
+product.basic002.ariaLabel	Zobacz szczegóły basic 002	View details of basic 002
+section.about.eyebrow	02 / studio	02 / studio
+about.description.1	Jesteśmy niezależnym studiem projektowym i producentem autorskich form użytkowych z Krakowa.	We are an independent design studio and producer of original functional objects based in Kraków.
+about.description.2	Łączymy procesy przemysłowe z rzemiosłem, poszukując równowagi między technologią, formą i materiałem.	We combine industrial processes with craftsmanship, seeking a balance between technology, form, and material.
+about.description.3	Projektujemy i produkujemy we własnym studio, dbając o każdy etap i detal powstawania produktu.	We design and produce in our own studio, paying attention to every stage and detail of the production process.
+about.madeIn	Zaprojektowano i wykonano w Krakowie, w Polsce.	Designed and made in Kraków, Poland.
+about.material.stone	kamień	stone
+about.material.aluminium	aluminium	aluminium
+about.material.glass	szkło	glass
+about.animation.rockAlt	Obracający się kamień	Rotating rock
+about.animation.waterAlt	Obracająca się woda	Rotating water
+about.animation.glassAlt	Obracające się szkło	Rotating glass
+section.contact.eyebrow	03 / skontaktuj się	03 / get in touch
+contact.form.nameLabel	IMIĘ	NAME
+contact.form.namePlaceholder	Twoje imię	Your name
+contact.form.emailLabel	EMAIL	EMAIL
+contact.form.emailPlaceholder	twoj@email.com	your@email.com
+contact.form.messageLabel	WIADOMOŚĆ	MESSAGE
+contact.form.messagePlaceholder	Opowiedz nam o swoim projekcie...	Tell us about your project...
+contact.form.submit	WYŚLIJ WIADOMOŚĆ ↗	SEND MESSAGE ↗
+contact.privacy.controller	Administratorem Twoich danych osobowych jest [NAZWA FIRMY], z siedzibą w [ADRES], NIP: [NIP].	The controller of your personal data is [COMPANY NAME], with its registered office at [ADDRESS], NIP: [NIP].
+contact.privacy.purpose	Dane podane w formularzu będą przetwarzane w celu udzielenia odpowiedzi na wiadomość oraz ewentualnego przygotowania i realizacji zamówienia.	The data provided in the form will be processed to respond to your message and, where applicable, to prepare and fulfil an order.
+contact.privacy.more	Więcej informacji na temat przetwarzania danych osobowych, przysługujących Ci praw oraz okresu przechowywania danych znajdziesz w naszej	For more information about how we process personal data, your rights and data retention periods, please see our
+contact.privacy.policyLink	Polityce prywatności	Privacy Policy
+legal.privacyPolicy	Polityka prywatności	Privacy Policy
+legal.terms	Regulamin	Terms & Conditions
+product.detail.closeAria	Zamknij produkt	Close product
+product.gallery.previousAria	Poprzednie zdjęcie	Previous image
+product.gallery.nextAria	Następne zdjęcie	Next image
+product.detail.category	 / PRODUKT	 / PRODUCT
+product.spec.sku	SKU	SKU
+product.spec.dimensions	WYMIARY	DIMENSIONS
+product.spec.collection	KOLEKCJA	COLLECTION
+product.spec.releaseDate	DATA PREMIERY	DATE OF RELEASE
+product.spec.unitPrice	SZTUKA / CENA	UNIT / PRICE
+product.enquire	ZAPYTAJ O PRODUKT ↗	ENQUIRE ABOUT PRODUCT ↗
+home.inProgress	Strona w przygotowaniu	website in progress
+contact.form.privacyInfo	Informacje o tym, jak przetwarzamy Twoje dane:	Information about how we process your data:
+contact.copyEmail	kopiuj adres e-mail	copy email
+social.instagram	instagram ↗	instagram ↗
+legal.languageAria	Wybór języka	Language selection
+legal.privacy.closeAria	Zamknij politykę prywatności	Close privacy policy
+legal.terms.closeAria	Zamknij regulamin	Close terms and conditions
+legal.close	ZAMKNIJ ×	CLOSE ×
+legal.common.eyebrow	BASIC MATERIALS / DOKUMENTY	BASIC MATERIALS / LEGAL
+legal.privacy.kicker	DOKUMENTY / 01	LEGAL / 01
+legal.terms.kicker	DOKUMENTY / 02	LEGAL / 02
+legal.privacy.body.01	POLITYKA PRYWATNOŚCI	PRIVACY POLICY
+legal.privacy.body.02	1. Administrator danych osobowych	1. Personal data controller
+legal.privacy.body.03	Administratorem danych osobowych osób korzystających ze strony internetowej [ADRES STRONY] jest:	The controller of personal data of users of the website [ADRES STRONY] is:
+legal.privacy.body.04	Nazwa firmy: [NAZWA FIRMY]	Company name: [NAZWA FIRMY]
+legal.privacy.body.05	Właściciel: [IMIĘ I NAZWISKO]	Owner: [IMIĘ I NAZWISKO]
+legal.privacy.body.06	Adres: [ADRES FIRMY]	Address: [ADRES FIRMY]
+legal.privacy.body.07	NIP: [NIP]	Tax identification number (NIP): [NIP]
+legal.privacy.body.08	Adres e-mail: [ADRES E-MAIL]	Email address: [ADRES E-MAIL]
+legal.privacy.body.09	Administrator odpowiada za przetwarzanie danych osobowych zgodnie z obowiązującymi przepisami, w szczególności rozporządzeniem RODO.	The Controller is responsible for processing personal data in accordance with applicable laws, in particular the General Data Protection Regulation (GDPR).
+legal.privacy.body.10	2. Jakie dane są przetwarzane?	2. What data is processed?
+legal.privacy.body.11	Administrator może przetwarzać następujące dane osobowe:	The Controller may process the following personal data:
+legal.privacy.body.12	imię i nazwisko,	first and last name,
+legal.privacy.body.13	adres poczty elektronicznej,	email address,
+legal.privacy.body.14	numer telefonu, jeżeli zostanie podany,	telephone number, if provided,
+legal.privacy.body.15	adres dostawy,	delivery address,
+legal.privacy.body.16	treść wiadomości przesłanej za pośrednictwem formularza kontaktowego,	content of messages sent via the contact form,
+legal.privacy.body.17	inne dane przekazane dobrowolnie przez Klienta w związku z zamówieniem.	other data voluntarily provided by the Customer in connection with an order.
+legal.privacy.body.18	3. Cele i podstawy przetwarzania danych	3. Purposes and legal bases for processing
+legal.privacy.body.19	Dane osobowe przetwarzane są w następujących celach:	Personal data is processed for the following purposes:
+legal.privacy.body.20	Udzielanie odpowiedzi na wiadomości przesłane przez formularz kontaktowy lub pocztę elektroniczną – na podstawie art. 6 ust. 1 lit. f RODO, czyli prawnie uzasadnionego interesu Administratora.	Responding to messages sent via the contact form or email — on the basis of Article 6(1)(f) GDPR, i.e. the Controller’s legitimate interest.
+legal.privacy.body.21	Przygotowanie i realizacja zamówień – na podstawie art. 6 ust. 1 lit. b RODO.	Preparing and fulfilling orders — on the basis of Article 6(1)(b) GDPR.
+legal.privacy.body.22	Realizacja obowiązków księgowych i podatkowych – na podstawie art. 6 ust. 1 lit. c RODO.	Fulfilling accounting and tax obligations — on the basis of Article 6(1)(c) GDPR.
+legal.privacy.body.23	Ustalenie, dochodzenie lub obrona przed ewentualnymi roszczeniami – na podstawie art. 6 ust. 1 lit. f RODO.	Establishing, pursuing or defending potential legal claims — on the basis of Article 6(1)(f) GDPR.
+legal.privacy.body.24	4. Odbiorcy danych	4. Recipients of data
+legal.privacy.body.25	Dane osobowe mogą być przekazywane podmiotom współpracującym z Administratorem w zakresie niezbędnym do realizacji zamówienia lub obsługi strony internetowej, w szczególności:	Personal data may be shared with entities cooperating with the Controller to the extent necessary to fulfil an order or operate the website, in particular:
+legal.privacy.body.26	firmom kurierskim realizującym dostawę,	courier companies delivering orders,
+legal.privacy.body.27	dostawcom usług poczty elektronicznej,	email service providers,
+legal.privacy.body.28	dostawcom usług hostingowych,	hosting service providers,
+legal.privacy.body.29	biuru rachunkowemu, jeżeli obsługuje Administratora,	an accounting firm, if engaged by the Controller,
+legal.privacy.body.30	podmiotom świadczącym usługi informatyczne, jeżeli mają dostęp do danych.	IT service providers, if they have access to the data.
+legal.privacy.body.31	Dane nie są sprzedawane innym podmiotom.	Personal data is not sold to third parties.
+legal.privacy.body.32	5. Okres przechowywania danych	5. Data retention periods
+legal.privacy.body.33	Dane osobowe przechowywane są:	Personal data is retained:
+legal.privacy.body.34	przez czas niezbędny do obsługi zapytania przesłanego przez formularz kontaktowy,	for the time necessary to handle an enquiry submitted via the contact form,
+legal.privacy.body.35	przez czas realizacji zamówienia oraz okres niezbędny do obsługi ewentualnych reklamacji,	for the duration of order fulfilment and the time necessary to handle any complaints,
+legal.privacy.body.36	przez okres wymagany przepisami prawa podatkowego i rachunkowego w przypadku dokumentacji związanej ze sprzedażą,	for the period required by tax and accounting laws in the case of sales-related documentation,
+legal.privacy.body.37	do czasu przedawnienia ewentualnych roszczeń w przypadku danych przetwarzanych w celu ich dochodzenia lub obrony.	until any potential claims become time-barred, where data is processed to pursue or defend such claims.
+legal.privacy.body.38	6. Prawa osób, których dane dotyczą	6. Rights of data subjects
+legal.privacy.body.39	Każdej osobie, której dane są przetwarzane, przysługuje prawo do:	Every person whose data is processed has the right to:
+legal.privacy.body.40	dostępu do swoich danych,	access their data,
+legal.privacy.body.41	sprostowania danych,	rectify their data,
+legal.privacy.body.42	usunięcia danych, jeżeli istnieją ku temu podstawy prawne,	erase their data where legally justified,
+legal.privacy.body.43	ograniczenia przetwarzania,	restrict processing,
+legal.privacy.body.44	przenoszenia danych, jeżeli ma zastosowanie,	data portability, where applicable,
+legal.privacy.body.45	wniesienia sprzeciwu wobec przetwarzania danych opartego na prawnie uzasadnionym interesie.	object to processing based on legitimate interests.
+legal.privacy.body.46	Osobie, której dane dotyczą, przysługuje również prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych.	Data subjects also have the right to lodge a complaint with the President of the Polish Personal Data Protection Office (UODO).
+legal.privacy.body.47	7. Dobrowolność podania danych	7. Voluntary provision of data
+legal.privacy.body.48	Podanie danych osobowych jest dobrowolne, jednak może być niezbędne do udzielenia odpowiedzi na zapytanie, przygotowania zamówienia lub jego realizacji.	Providing personal data is voluntary; however, it may be necessary to respond to an enquiry or prepare or fulfil an order.
+legal.privacy.body.49	Niepodanie danych niezbędnych do realizacji zamówienia może uniemożliwić jego wykonanie.	Failure to provide data necessary to fulfil an order may prevent its completion.
+legal.privacy.body.50	8. Pliki cookies	8. Cookies
+legal.privacy.body.51	Strona internetowa nie wykorzystuje plików cookies w celach marketingowych ani analitycznych.	The website does not use cookies for marketing or analytics purposes.
+legal.privacy.body.52	Jeżeli w przyszłości zostaną wdrożone dodatkowe technologie wykorzystujące pliki cookies lub podobne rozwiązania, informacje dotyczące ich stosowania zostaną odpowiednio zaktualizowane.	If additional technologies using cookies or similar solutions are introduced in the future, information about their use will be updated accordingly.
+legal.privacy.body.53	9. Bezpieczeństwo danych	9. Data security
+legal.privacy.body.54	Administrator stosuje odpowiednie środki techniczne i organizacyjne mające na celu ochronę danych osobowych przed ich utratą, nieuprawnionym dostępem, ujawnieniem lub zniszczeniem.	The Controller implements appropriate technical and organisational measures to protect personal data against loss, unauthorised access, disclosure or destruction.
+legal.privacy.body.55	10. Postanowienia końcowe	10. Final provisions
+legal.privacy.body.56	Administrator zastrzega sobie prawo do aktualizacji niniejszej polityki prywatności w przypadku zmian przepisów prawa lub sposobu funkcjonowania strony internetowej.	The Controller reserves the right to update this Privacy Policy in the event of changes in law or the operation of the website.
+legal.privacy.body.57	Polityka prywatności obowiązuje od dnia [DATA].	This Privacy Policy is effective as of [DATA].
+legal.terms.body.01	REGULAMIN SPRZEDAŻY I ŚWIADCZENIA USŁUG DROGĄ ELEKTRONICZNĄ	TERMS AND CONDITIONS OF SALE AND ELECTRONIC SERVICES
+legal.terms.body.02	§ 1. Postanowienia ogólne	§ 1. General provisions
+legal.terms.body.03	Niniejszy regulamin określa zasady korzystania ze strony internetowej [ADRES STRONY], składania zamówień na produkty rękodzielnicze oraz warunki sprzedaży.	These Terms and Conditions govern the use of the website [ADRES STRONY], the placing of orders for handmade products and the terms of sale.
+legal.terms.body.04	Właścicielem i administratorem strony internetowej jest:	The owner and operator of the website is:
+legal.terms.body.05	Nazwa firmy: [NAZWA FIRMY]	Company name: [NAZWA FIRMY]
+legal.terms.body.06	Właściciel: [IMIĘ I NAZWISKO]	Owner: [IMIĘ I NAZWISKO]
+legal.terms.body.07	Adres siedziby: [ADRES]	Registered office: [ADRES]
+legal.terms.body.08	NIP: [NIP]	Tax identification number (NIP): [NIP]
+legal.terms.body.09	Adres e-mail: [ADRES E-MAIL]	Email address: [ADRES E-MAIL]
+legal.terms.body.10	Regulamin jest udostępniony nieodpłatnie na stronie internetowej w sposób umożliwiający jego odczytanie, pobranie i zapisanie.	These Terms and Conditions are provided free of charge on the website in a way that allows them to be read, downloaded and saved.
+legal.terms.body.11	Kontakt ze Sprzedawcą odbywa się za pośrednictwem poczty elektronicznej lub formularza kontaktowego dostępnego na stronie.	Customers may contact the Seller by email or through the contact form available on the website.
+legal.terms.body.12	§ 2. Produkty	§ 2. Products
+legal.terms.body.13	Przedmiotem sprzedaży są produkty rękodzielnicze wykonywane ręcznie przez Sprzedawcę.	The products offered for sale are handmade items produced by the Seller.
+legal.terms.body.14	Produkty prezentowane na stronie internetowej przedstawiają przykładowy wygląd oferowanych wyrobów.	Products displayed on the website illustrate the appearance of the items offered.
+legal.terms.body.15	Ze względu na ręczny sposób wykonania poszczególne egzemplarze mogą nieznacznie różnić się od siebie, w szczególności odcieniem, fakturą lub drobnymi detalami wykonania.	Due to their handmade nature, individual items may differ slightly, particularly in shade, texture or minor details of workmanship.
+legal.terms.body.16	Różnice wynikające z ręcznego charakteru produktu nie stanowią same w sobie niezgodności towaru z umową, o ile produkt odpowiada uzgodnionemu opisowi i właściwościom.	Differences arising from the handmade nature of a product do not in themselves constitute a lack of conformity with the contract, provided the product matches the agreed description and characteristics.
+legal.terms.body.17	Sprzedawca umożliwia również realizację indywidualnych projektów na podstawie uzgodnień z Klientem.	The Seller also offers bespoke projects subject to arrangements agreed with the Customer.
+legal.terms.body.18	§ 3. Składanie zamówień	§ 3. Placing orders
+legal.terms.body.19	Zamówienia przyjmowane są za pośrednictwem formularza kontaktowego dostępnego na stronie internetowej lub drogą mailową.	Orders are accepted via the contact form on the website or by email.
+legal.terms.body.20	W celu złożenia zamówienia Klient wskazuje wybrany produkt oraz przekazuje dane niezbędne do kontaktu i realizacji zamówienia.	To place an order, the Customer identifies the selected product and provides the information necessary for contact and order fulfilment.
+legal.terms.body.21	W przypadku zamówień indywidualnych szczegóły projektu, jego wygląd, zakres oraz cena ustalane są indywidualnie drogą mailową.	For bespoke orders, the project details, appearance, scope and price are agreed individually by email.
+legal.terms.body.22	Po otrzymaniu zgłoszenia Sprzedawca kontaktuje się z Klientem w celu potwierdzenia dostępności produktu, ceny, warunków realizacji oraz sposobu płatności.	Upon receiving an enquiry, the Seller contacts the Customer to confirm product availability, price, fulfilment terms and payment method.
+legal.terms.body.23	Umowa sprzedaży zostaje zawarta po uzgodnieniu wszystkich istotnych warunków zamówienia i otrzymaniu przez Klienta potwierdzenia przyjęcia zamówienia przez Sprzedawcę.	A sales contract is concluded once all material terms of the order have been agreed and the Customer has received confirmation that the Seller has accepted the order.
+legal.terms.body.24	Samo wysłanie formularza kontaktowego nie jest równoznaczne z zawarciem umowy sprzedaży.	Submitting the contact form alone does not constitute the conclusion of a sales contract.
+legal.terms.body.25	§ 4. Ceny i płatności	§ 4. Prices and payments
+legal.terms.body.26	Ceny produktów prezentowane na stronie internetowej podawane są w złotych polskich (PLN).	Prices displayed on the website are stated in Polish złoty (PLN).
+legal.terms.body.27	Cena produktu obejmuje koszt dostawy kurierskiej.	The product price includes courier delivery.
+legal.terms.body.28	Płatność za zamówienie dokonywana jest z góry przelewem bankowym na rachunek wskazany przez Sprzedawcę.	Payment is made in advance by bank transfer to the account specified by the Seller.
+legal.terms.body.29	Dane do przelewu przekazywane są Klientowi drogą mailową po potwierdzeniu zamówienia.	Bank transfer details are provided to the Customer by email after the order has been confirmed.
+legal.terms.body.30	Zamówienie kierowane jest do realizacji po zaksięgowaniu płatności na rachunku Sprzedawcy.	The order enters production once payment has been credited to the Seller’s account.
+legal.terms.body.31	§ 5. Realizacja zamówień i dostawa	§ 5. Order fulfilment and delivery
+legal.terms.body.32	Produkty wykonywane są ręcznie, dlatego czas realizacji zamówienia może być dłuższy niż w przypadku produktów dostępnych od ręki.	Products are handmade, so fulfilment may take longer than for products available off the shelf.
+legal.terms.body.33	Standardowy czas realizacji wynosi do 4 tygodni od dnia zaksięgowania płatności na rachunku Sprzedawcy.	The standard fulfilment time is up to 4 weeks from the date the payment is credited to the Seller’s account.
+legal.terms.body.34	Czas realizacji obejmuje wykonanie produktu oraz przygotowanie go do wysyłki.	The fulfilment period includes making the product and preparing it for dispatch.
+legal.terms.body.35	Dostawa realizowana jest za pośrednictwem firmy kurierskiej na adres wskazany przez Klienta.	Delivery is carried out by courier to the address provided by the Customer.
+legal.terms.body.36	Koszt dostawy kurierskiej jest wliczony w cenę produktu.	Courier delivery costs are included in the product price.
+legal.terms.body.37	Klient zostanie poinformowany drogą mailową o ewentualnych okolicznościach mogących wpłynąć na termin realizacji zamówienia.	The Customer will be informed by email of any circumstances that may affect the fulfilment date.
+legal.terms.body.38	§ 6. Prawo odstąpienia od umowy	§ 6. Right of withdrawal
+legal.terms.body.39	Klient będący konsumentem ma prawo odstąpić od umowy zawartej na odległość w terminie 14 dni bez podawania przyczyny, z zastrzeżeniem wyjątków przewidzianych w obowiązujących przepisach prawa.	A Customer who is a consumer has the right to withdraw from a distance contract within 14 days without giving a reason, subject to exceptions provided by applicable law.
+legal.terms.body.40	Termin do odstąpienia od umowy rozpoczyna się od dnia objęcia produktu w posiadanie przez konsumenta lub wskazaną przez niego osobę trzecią inną niż przewoźnik.	The withdrawal period begins on the day the consumer, or a third party designated by the consumer other than the carrier, takes possession of the product.
+legal.terms.body.41	Aby skorzystać z prawa odstąpienia, Klient powinien poinformować Sprzedawcę o swojej decyzji poprzez jednoznaczne oświadczenie przesłane pocztą elektroniczną lub listownie.	To exercise the right of withdrawal, the Customer must inform the Seller of their decision by an unequivocal statement sent by email or post.
+legal.terms.body.42	W przypadku skutecznego odstąpienia od umowy Sprzedawca zwraca otrzymane płatności zgodnie z obowiązującymi przepisami.	In the event of valid withdrawal, the Seller refunds payments received in accordance with applicable law.
+legal.terms.body.43	Prawo odstąpienia od umowy nie przysługuje w przypadku produktów nieprefabrykowanych, wykonanych według specyfikacji konsumenta lub służących zaspokojeniu jego zindywidualizowanych potrzeb, zgodnie z art. 38 ust. 1 pkt 3 ustawy o prawach konsumenta.	The right of withdrawal does not apply to non-prefabricated products made to the consumer’s specifications or intended to meet the consumer’s individual needs, pursuant to Article 38(1)(3) of the Polish Consumer Rights Act.
+legal.terms.body.44	Wyłączenie prawa odstąpienia dotyczy wyłącznie produktów spełniających ustawowe przesłanki i nie obejmuje automatycznie wszystkich produktów wykonywanych ręcznie.	This exemption applies only to products that meet the statutory criteria; it does not automatically cover all handmade products.
+legal.terms.body.45	§ 7. Reklamacje	§ 7. Complaints
+legal.terms.body.46	Sprzedawca ponosi odpowiedzialność za zgodność towaru z umową na zasadach określonych w obowiązujących przepisach prawa.	The Seller is responsible for the conformity of goods with the contract under applicable law.
+legal.terms.body.47	W przypadku stwierdzenia niezgodności towaru z umową Klient ma prawo złożyć reklamację.	If goods do not conform to the contract, the Customer has the right to lodge a complaint.
+legal.terms.body.48	Reklamację można zgłosić:	Complaints may be submitted:
+legal.terms.body.49	drogą mailową na adres: [ADRES E-MAIL],	by email to: [ADRES E-MAIL],
+legal.terms.body.50	listownie na adres siedziby Sprzedawcy.	by post to the Seller’s registered office.
+legal.terms.body.51	Reklamacja powinna zawierać opis problemu oraz dane umożliwiające kontakt z Klientem. Dołączenie zdjęć może ułatwić rozpatrzenie reklamacji, ale nie jest obowiązkowe.	A complaint should describe the problem and provide contact details. Photos may help assess the complaint but are not mandatory.
+legal.terms.body.52	Sprzedawca rozpatruje reklamację w terminie 14 dni od jej otrzymania.	The Seller responds to complaints within 14 days of receipt.
+legal.terms.body.53	Uprawnienia Klienta wynikające z przepisów dotyczących niezgodności towaru z umową nie są ograniczone niniejszym regulaminem.	These Terms and Conditions do not limit the Customer’s statutory rights regarding lack of conformity of goods with the contract.
+legal.terms.body.54	§ 8. Usługi świadczone drogą elektroniczną	§ 8. Electronic services
+legal.terms.body.55	Za pośrednictwem strony internetowej Sprzedawca świadczy nieodpłatnie usługę umożliwiającą kontakt za pomocą formularza kontaktowego.	Through the website, the Seller provides a free service enabling contact via the contact form.
+legal.terms.body.56	Korzystanie z formularza wymaga urządzenia z dostępem do Internetu oraz aktualnej przeglądarki internetowej.	Using the form requires an internet-connected device and an up-to-date web browser.
+legal.terms.body.57	Klient zobowiązany jest do korzystania ze strony w sposób zgodny z prawem i dobrymi obyczajami.	The Customer must use the website in compliance with the law and generally accepted standards of conduct.
+legal.terms.body.58	Zabronione jest przesyłanie za pośrednictwem formularza treści bezprawnych.	Sending unlawful content through the form is prohibited.
+legal.terms.body.59	Reklamacje dotyczące funkcjonowania formularza kontaktowego można zgłaszać na adres e-mail Sprzedawcy.	Complaints concerning the operation of the contact form may be sent to the Seller’s email address.
+legal.terms.body.60	Sprzedawca rozpatruje reklamacje dotyczące usług elektronicznych w terminie 14 dni.	The Seller responds to complaints relating to electronic services within 14 days.
+legal.terms.body.61	§ 9. Postanowienia końcowe	§ 9. Final provisions
+legal.terms.body.62	W sprawach nieuregulowanych niniejszym regulaminem zastosowanie mają przepisy prawa polskiego.	Matters not covered by these Terms and Conditions are governed by Polish law.
+legal.terms.body.63	Żadne postanowienie regulaminu nie ogranicza praw konsumentów wynikających z bezwzględnie obowiązujących przepisów prawa.	Nothing in these Terms and Conditions limits consumer rights arising from mandatory provisions of law.
+legal.terms.body.64	Regulamin obowiązuje od dnia [DATA].	These Terms and Conditions are effective as of [DATA].
+legal.terms.body.65	Sprzedawca zastrzega sobie prawo do zmiany regulaminu z ważnych przyczyn prawnych lub organizacyjnych. Zmiany nie naruszają praw nabytych Klientów.	The Seller reserves the right to amend these Terms and Conditions for valid legal or organisational reasons. Changes do not affect rights already acquired by Customers.

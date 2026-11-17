@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="{{__LANG__}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="{{meta.description}}"
+    />
+    <title>{{meta.title}}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- SEO_LINKS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/i18n.css" />
+    <script id="i18n-dictionary" type="application/json"><!-- I18N_DICTIONARY --></script>
+    <script src="/js/i18n.js" defer></script>
+    <script src="/js/main.js" defer></script>
+    <script src="/js/products.js" defer></script>
+    <script src="/js/contact.js" defer></script>
+    <script src="/js/glitch.js" defer></script>
+    <script src="/js/legal.js" defer></script>
+    <link rel="stylesheet" href="/assets/product-3d/product-3d.css" />
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="{{header.homeAria}}">
+        <img
+          class="logo small"
+          src="/assets/logo_lime.svg"
+          alt="{{header.logoAlt}}"
+        />
+      </a>
+      <nav aria-label="{{nav.ariaLabel}}">
+        <a href="#products" class="nav-link">{{nav.products}}</a>
+        <a href="#about" class="nav-link">{{nav.about}}</a>
+        <a href="#contact" class="nav-link">{{nav.contact}}</a>
+        <span class="language-switcher" role="group" aria-label="{{legal.languageAria}}">
+          <a href="/en/" lang="en" hreflang="en" data-lang-link="en">EN</a>
+          <span aria-hidden="true">/</span>
+          <a href="/pl/" lang="pl" hreflang="pl" data-lang-link="pl">PL</a>
+        </span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel panel-home" id="home" aria-labelledby="home-title">
+        <div class="home-content">
+          <img
+            class="logo big"
+            src="/assets/logo.png"
+            alt="{{header.logoAlt}}"
+          />
+          <!-- <img class="logo" src="/assets/logo.png" alt="{{header.logoAlt}}">
+        <h1 id="home-title">{{home.inProgress}}</h1>
+      </div>
+      <div class="home-footer">
+        <a href="mailto:contact@basicmaterials.studio">contact@basicmaterials.studio</a>
+        <a href="https://www.instagram.com/basicmaterials.studio/" target="_blank" rel="noopener noreferrer">@basicmaterials.studio</a> -->
+        </div>
+      </section>
+
+      <section
+        class="panel panel-products section-panel"
+        id="products"
+        aria-labelledby="products-title"
+      >
+        <div class="panel-content second-column">
+          <p class="eyebrow">{{section.products.eyebrow}}</p>
+          <h2 id="products-title">{{nav.products}}</h2>
+        </div>
+        <div class="panel-content main-view">
+          <div class="products-grid">
+            <article
+              class="product-card"
+              data-product="product-01"
+              role="button"
+              tabindex="0"
+              aria-label="{{product.basic001.ariaLabel}}"
+            >
+              <div class="product-image product-image-01"></div>
+              <h3>{{product.basic001.title}}</h3>
+              <p>{{product.comingSoon}}</p>
+            </article>
+
+            <article
+              class="product-card"
+              data-product="product-02"
+              role="button"
+              tabindex="0"
+              aria-label="{{product.basic002.ariaLabel}}"
+            >
+              <div class="product-image product-image-02"></div>
+              <h3>{{product.basic002.title}}</h3>
+              <p>{{product.comingSoon}}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="panel panel-about section-panel"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="panel-content second-column">
+          <p class="eyebrow">{{section.about.eyebrow}}</p>
+          <h2 id="about-title">{{nav.about}}</h2>
+        </div>
+        <div class="main-view">
+          <p>
+            <strong>{{brand.name}}</strong>
+          </p>
+          <p>
+            {{about.description.1}}<br />
+            {{about.description.2}}<br />
+            {{about.description.3}}
+          </p>
+          <p>{{about.madeIn}}</p>
+          <div class="panel-content components-animations">
+            <!-- ROCK -->
+            <div class="component-block">
+              <div class="animation-visual">
+                <img
+                  src="/assets/info_animations/rock.gif"
+                  alt="{{about.animation.rockAlt}}"
+                  class="product-animation"
+                />
+                <div class="glitch-layer glitch-layer--red" aria-hidden="true">
+                  <img src="/assets/info_animations/rock.gif" alt="" />
+                </div>
+                <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
+                  <img src="/assets/info_animations/rock.gif" alt="" />
+                </div>
+              </div>
+              <p class="animation-caption">{{about.material.stone}}</p>
+            </div>
+
+            <!-- WATER -->
+            <div class="component-block">
+              <div class="animation-visual img-smaller">
+                <img
+                  src="/assets/info_animations/water.gif"
+                  alt="{{about.animation.waterAlt}}"
+                  class="product-animation"
+                />
+                <div class="glitch-layer glitch-layer--red" aria-hidden="true">
+                  <img src="/assets/info_animations/water.gif" alt="" />
+                </div>
+                <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
+                  <img src="/assets/info_animations/water.gif" alt="" />
+                </div>
+              </div>
+              <p class="animation-caption">{{about.material.aluminium}}</p>
+            </div>
+
+            <!-- GLASS -->
+            <div class="component-block">
+              <div class="animation-visual img-smallest">
+                <img
+                  src="/assets/info_animations/glass.gif"
+                  alt="{{about.animation.glassAlt}}"
+                  class="product-animation"
+                />
+                <div class="glitch-layer glitch-layer--red" aria-hidden="true">
+                  <img src="/assets/info_animations/glass.gif" alt="" />
+                </div>
+                <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
+                  <img src="/assets/info_animations/glass.gif" alt="" />
+                </div>
+              </div>
+              <p class="animation-caption">{{about.material.glass}}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="panel panel-contact section-panel"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="panel-content second-column">
+          <p class="eyebrow">{{section.contact.eyebrow}}</p>
+          <h2 id="contact-title">{{nav.contact}}</h2>
+        </div>
+        <div class="main-view">
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/mljjkglk"
+            method="POST"
+          >
+            <div class="form-field">
+              <label for="contact-name">{{contact.form.nameLabel}}</label>
+              <input
+                type="text"
+                id="contact-name"
+                name="name"
+                placeholder="{{contact.form.namePlaceholder}}"
+                autocomplete="name"
+                maxlength="100"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email">{{contact.form.emailLabel}}</label>
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                placeholder="{{contact.form.emailPlaceholder}}"
+                autocomplete="email"
+                maxlength="254"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">{{contact.form.messageLabel}}</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                placeholder="{{contact.form.messagePlaceholder}}"
+                maxlength="5000"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <!-- <p class="form-privacy">
+              {{contact.form.privacyInfo}}
+              <a href="#privacy">{{legal.privacyPolicy}}</a>.
+            </p> -->
+            <p class="form-privacy">
+              {{contact.privacy.controller}}
+              {{contact.privacy.purpose}}
+              {{contact.privacy.more}}
+              <a href="#privacy" data-legal="privacy">{{contact.privacy.policyLink}}</a>.
+            </p>
+            <div class="form-actions">
+              <p id="form-status" role="status" aria-live="polite"></p>
+
+              <button type="submit" class="form-submit">{{contact.form.submit}}</button>
+            </div>
+          </form>
+          <!-- TODO: znelźć na to miejsce -->
+          <!-- <a class="contact-email" href="mailto:contact@basicmaterials.studio"
+            >contact@basicmaterials.studio</a
+          >
+          <button
+            class="copy-button"
+            type="button"
+            data-copy-email="contact@basicmaterials.studio"
+          >
+            {{contact.copyEmail}}
+          </button>
+          <a
+            href="https://www.instagram.com/basicmaterials.studio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{social.instagram}}</a
+          > -->
+          <p class="copy-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+      <a href="#privacy" data-legal="privacy">{{legal.privacyPolicy}}</a>
+      <a href="#terms" data-legal="terms">{{legal.terms}}</a>
+    </main>
+
+    <div class="product-overlay" id="product-overlay" aria-hidden="true">
+      <div class="product-overlay__backdrop"></div>
+
+      <section
+        class="product-detail"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="product-title"
+        tabindex="-1"
+      >
+        <button
+          class="product-detail__close"
+          type="button"
+          aria-label="{{product.detail.closeAria}}"
+        >
+          &times;
+        </button>
+
+        <!-- LEFT: IMAGE -->
+        <div class="product-detail__visual">
+          <div class="product-detail__image">
+            <div class="product-gallery">
+              <img
+                id="product-image"
+                class="product-gallery__image"
+                src=""
+                alt=""
+              />
+
+              <button
+                type="button"
+                class="product-gallery__arrow product-gallery__arrow--prev"
+                aria-label="{{product.gallery.previousAria}}"
+              >
+                &#8592;
+              </button>
+
+              <button
+                type="button"
+                class="product-gallery__arrow product-gallery__arrow--next"
+                aria-label="{{product.gallery.nextAria}}"
+              >
+                &#8594;
+              </button>
+
+              <div class="product-gallery__counter">
+                <span id="gallery-current">01</span>
+                <span>/</span>
+                <span id="gallery-total">01</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: INFORMATION -->
+        <div class="product-detail__information">
+          <div class="product-detail__heading">
+            <span class="product-detail__category">{{product.detail.category}}</span>
+
+            <h2 id="product-title"></h2>
+            <p id="product-description"></p>
+          </div>
+          <div class="product-detail__product-3d">
+            <div class="product-3d" data-product-3d></div>
+          </div>
+
+          <div class="product-detail__bottom">
+            <div class="product-detail__specs">
+              <div class="spec">
+                <span>{{product.spec.sku}}</span>
+                <strong id="product-sku"></strong>
+              </div>
+
+              <div class="spec">
+                <span>{{product.spec.dimensions}}</span>
+                <strong id="product-dimensions"></strong>
+              </div>
+
+              <div class="spec">
+                <span>{{product.spec.collection}}</span>
+                <strong id="product-material"></strong>
+              </div>
+
+              <div class="spec">
+                <span>{{product.spec.releaseDate}}</span>
+                <strong id="product-origin"></strong>
+              </div>
+            </div>
+
+            <div class="product-detail__purchase">
+              <div>
+                <span>{{product.spec.unitPrice}}</span>
+                <p id="product-price"></p>
+              </div>
+
+              <a id="product-contact-btn" class="product-detail__cta">
+                {{product.enquire}}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="/assets/product-3d/product-3d.js"></script>
+
+<!-- ==========================================
+     PRIVACY POLICY PANEL
+========================================== -->
+<div
+  id="privacy-overlay"
+  class="legal-overlay"
+  aria-hidden="true"
+>
+  <div class="legal-overlay__backdrop"></div>
+
+  <section
+    class="legal-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="privacy-title"
+    tabindex="-1"
+  >
+    <header class="legal-panel__header">
+      <span>{{legal.privacy.kicker}}</span>
+
+      <button
+        class="legal-panel__close"
+        type="button"
+        aria-label="{{legal.privacy.closeAria}}"
+      >
+        {{legal.close}}
+      </button>
+    </header>
+
+    <div class="legal-panel__content">
+      <p class="eyebrow">{{legal.common.eyebrow}}</p>
+      <h2 id="privacy-title">{{legal.privacyPolicy}}</h2>
+
+      <div class="legal-panel__body">
+      {{legal.privacy.body.01}}
+
+
+{{legal.privacy.body.02}}
+
+
+{{legal.privacy.body.03}}
+
+{{legal.privacy.body.04}}
+
+{{legal.privacy.body.05}}
+
+{{legal.privacy.body.06}}
+
+{{legal.privacy.body.07}}
+
+{{legal.privacy.body.08}}
+
+
+
+{{legal.privacy.body.09}}
+
+
+
+{{legal.privacy.body.10}}
+
+
+{{legal.privacy.body.11}}
+
+{{legal.privacy.body.12}}
+
+{{legal.privacy.body.13}}
+
+{{legal.privacy.body.14}}
+
+{{legal.privacy.body.15}}
+
+{{legal.privacy.body.16}}
+
+{{legal.privacy.body.17}}
+
+
+
+{{legal.privacy.body.18}}
+
+
+{{legal.privacy.body.19}}
+
+{{legal.privacy.body.20}}
+
+{{legal.privacy.body.21}}
+
+{{legal.privacy.body.22}}
+
+{{legal.privacy.body.23}}
+
+
+
+{{legal.privacy.body.24}}
+
+
+{{legal.privacy.body.25}}
+
+{{legal.privacy.body.26}}
+
+{{legal.privacy.body.27}}
+
+{{legal.privacy.body.28}}
+
+{{legal.privacy.body.29}}
+
+{{legal.privacy.body.30}}
+
+
+
+{{legal.privacy.body.31}}
+
+
+
+{{legal.privacy.body.32}}
+
+
+{{legal.privacy.body.33}}
+
+{{legal.privacy.body.34}}
+
+{{legal.privacy.body.35}}
+
+{{legal.privacy.body.36}}
+
+{{legal.privacy.body.37}}
+
+
+
+{{legal.privacy.body.38}}
+
+
+{{legal.privacy.body.39}}
+
+{{legal.privacy.body.40}}
+
+{{legal.privacy.body.41}}
+
+{{legal.privacy.body.42}}
+
+{{legal.privacy.body.43}}
+
+{{legal.privacy.body.44}}
+
+{{legal.privacy.body.45}}
+
+
+
+{{legal.privacy.body.46}}
+
+
+
+{{legal.privacy.body.47}}
+
+
+{{legal.privacy.body.48}}
+
+
+
+{{legal.privacy.body.49}}
+
+
+
+{{legal.privacy.body.50}}
+
+
+{{legal.privacy.body.51}}
+
+
+
+{{legal.privacy.body.52}}
+
+
+
+{{legal.privacy.body.53}}
+
+
+{{legal.privacy.body.54}}
+
+
+
+{{legal.privacy.body.55}}
+
+
+{{legal.privacy.body.56}}
+
+
+
+{{legal.privacy.body.57}}
+
+
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ==========================================
+     TERMS & CONDITIONS PANEL
+========================================== -->
+<div
+  id="terms-overlay"
+  class="legal-overlay"
+  aria-hidden="true"
+>
+  <div class="legal-overlay__backdrop"></div>
+
+  <section
+    class="legal-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="terms-title"
+    tabindex="-1"
+  >
+    <header class="legal-panel__header">
+      <span>{{legal.terms.kicker}}</span>
+
+      <button
+        class="legal-panel__close"
+        type="button"
+        aria-label="{{legal.terms.closeAria}}"
+      >
+        {{legal.close}}
+      </button>
+    </header>
+
+    <div class="legal-panel__content">
+      <p class="eyebrow">{{legal.common.eyebrow}}</p>
+      <h2 id="terms-title">{{legal.terms}}</h2>
+
+      <div class="legal-panel__body">
+       {{legal.terms.body.01}}
+
+
+{{legal.terms.body.02}}
+{{legal.terms.body.03}}
+
+{{legal.terms.body.04}}
+
+{{legal.terms.body.05}}
+
+{{legal.terms.body.06}}
+
+{{legal.terms.body.07}}
+
+{{legal.terms.body.08}}
+
+{{legal.terms.body.09}}
+
+{{legal.terms.body.10}}
+
+{{legal.terms.body.11}}
+
+
+
+{{legal.terms.body.12}}
+{{legal.terms.body.13}}
+
+{{legal.terms.body.14}}
+
+{{legal.terms.body.15}}
+
+{{legal.terms.body.16}}
+
+{{legal.terms.body.17}}
+
+
+
+{{legal.terms.body.18}}
+{{legal.terms.body.19}}
+
+{{legal.terms.body.20}}
+
+{{legal.terms.body.21}}
+
+{{legal.terms.body.22}}
+
+{{legal.terms.body.23}}
+
+{{legal.terms.body.24}}
+
+
+
+{{legal.terms.body.25}}
+{{legal.terms.body.26}}
+
+{{legal.terms.body.27}}
+
+{{legal.terms.body.28}}
+
+{{legal.terms.body.29}}
+
+{{legal.terms.body.30}}
+
+
+
+{{legal.terms.body.31}}
+{{legal.terms.body.32}}
+
+{{legal.terms.body.33}}
+
+{{legal.terms.body.34}}
+
+{{legal.terms.body.35}}
+
+{{legal.terms.body.36}}
+
+{{legal.terms.body.37}}
+
+
+
+{{legal.terms.body.38}}
+{{legal.terms.body.39}}
+
+{{legal.terms.body.40}}
+
+{{legal.terms.body.41}}
+
+{{legal.terms.body.42}}
+
+{{legal.terms.body.43}}
+
+{{legal.terms.body.44}}
+
+
+
+{{legal.terms.body.45}}
+{{legal.terms.body.46}}
+
+{{legal.terms.body.47}}
+
+{{legal.terms.body.48}}
+
+{{legal.terms.body.49}}
+
+{{legal.terms.body.50}}
+
+{{legal.terms.body.51}}
+
+{{legal.terms.body.52}}
+
+{{legal.terms.body.53}}
+
+
+
+{{legal.terms.body.54}}
+{{legal.terms.body.55}}
+
+{{legal.terms.body.56}}
+
+{{legal.terms.body.57}}
+
+{{legal.terms.body.58}}
+
+{{legal.terms.body.59}}
+
+{{legal.terms.body.60}}
+
+
+
+{{legal.terms.body.61}}
+{{legal.terms.body.62}}
+
+{{legal.terms.body.63}}
+
+{{legal.terms.body.64}}
+
+{{legal.terms.body.65}}
+
+
+      </div>
+    </div>
+  </section>
+</div>
+
+  </body>
+</html>
