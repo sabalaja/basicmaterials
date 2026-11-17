@@ -1,7 +1,7 @@
 const productData = {
   "product-01": {
     title: "BASIC 001",
-    description: "An experimental object exploring material and form.",
+    description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model t",
     images: [
       "./assets/products/basic_001/1.jpg",
       "./assets/products/basic_001/2.jpg",
@@ -11,16 +11,16 @@ const productData = {
       "./assets/products/basic_001/6.jpg",
     ],
     sku: "BM-001",
-    material: "ALUMINIUM",
+    material: "LIMITED",
     dimensions: "40 × 60 × 20 CM",
-    origin: "POLAND",
+    origin: "01.2027",
     price: "COMING SOON",
     reference: "001 / 2026",
   },
 
   "product-02": {
     title: "BASIC 002",
-    description: "A functional object combining design and experimentation.",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.",
     images: [
       "./assets/products/basic_002/1.jpg",
       "./assets/products/basic_002/2.jpg",
@@ -30,9 +30,9 @@ const productData = {
       "./assets/products/basic_002/6.jpg",
     ],
     sku: "BM-002",
-    material: "STEEL",
+    material: "NORMAL",
     dimensions: "30 × 45 × 15 CM",
-    origin: "POLAND",
+    origin: "01.2027",
     price: "COMING SOON",
     reference: "002 / 2026",
   },

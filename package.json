@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "sass --watch scss/style.scss css/style.css",
-    "build": "sass scss/style.scss css/style.css --style=compressed --no-source-map"
+    "build": "sass scss/style.scss css/style.css --style=compressed --no-source-map",
+    "translate": "node scripts/translation.mjs"
   },
   "name": "basicmaterials",
   "version": "1.0.0",

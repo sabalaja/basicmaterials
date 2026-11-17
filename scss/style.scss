@@ -505,6 +505,7 @@ h2 {
 		font-size: 0.7rem;
 		letter-spacing: 0.05em;
 		line-height: 1.5;
+		height: 20px;
 	}
 
 	&__image {
@@ -521,8 +522,8 @@ h2 {
 	&__information {
 		min-width: 0;
 		min-height: 0;
-		padding: clamp(30px, 3vw, 60px);
-		padding-top: 14px;
+		padding: 20px;
+		padding-top: 16px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -534,7 +535,6 @@ h2 {
 		display: inline-flex;
 		align-items: center;
 		gap: 10px;
-		padding: 7px 10px;
 		border: none;
 		font-size: 0.7rem;
 		letter-spacing: 0.06em;
@@ -550,9 +550,10 @@ h2 {
 	&__heading {
 		h2 {
 			margin: 0;
-			margin-top: 5px;
+			margin-top: 10px;
+			margin-bottom: 15px;
 			font-family: inherit;
-			font-size: clamp(3rem, 5.5vw, 7rem);
+			font-size: clamp(1.6rem, 2.5vw, 7rem);
 			font-weight: 300;
 			line-height: 0.7;
 			text-transform: lowercase;
@@ -561,11 +562,24 @@ h2 {
 
 		p {
 			// max-width: 450px;
-			font-size: clamp(0.9rem, 1vw, 1.1rem);
+			font-size: clamp(0.75rem, 1vw, 1.1rem);
 			line-height: 1;
 			margin-top: 5px;
+			font-weight: 100;
 		}
 	}
+
+	// &__visual-info {
+	// 	display: flex;
+	// 	 .product-detail__product-3d {
+	// 		width: 75%;
+	// 	 }
+	// 	 .product-detail__info {
+	// 		width: 25%;
+	// 		font-size: 16px;
+	// 		font-weight: 100;
+	// 	 }
+	// }
 
 	&__specs {
 		display: grid;
@@ -843,13 +857,14 @@ body.overlay-open {
 }
 
 .form-privacy {
-	font-size: 0.75rem;
+	font-size: 0.65rem;
 	line-height: 1.6;
-	color: #666;
+	color: #909090;
 
 	a {
 		text-decoration: underline;
 		text-underline-offset: 3px;
+		color: $primary-color;
 	}
 }
 
@@ -1135,4 +1150,128 @@ body.overlay-open {
 			color: $primary-color;
 		}
 	}
+}
+
+
+// ==========================================
+// LEGAL OVERLAYS
+// ==========================================
+
+.legal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0s linear 0.7s;
+
+  &.is-open {
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    opacity: 0;
+    transition: opacity 0.7s ease;
+  }
+
+  &.is-open &__backdrop {
+    opacity: 1;
+  }
+}
+
+.legal-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(800px, 100%);
+  height: 100%;
+  height: 100dvh;
+  background: $color-background;
+  color: $color-text;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.7s ease;
+  overflow: hidden;
+
+  .is-open & {
+    transform: translateX(0);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-shrink: 0;
+    padding: 30px 40px;
+  }
+
+  &__close {
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  &__content {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 30px 40px 80px;
+  }
+
+  h2 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    margin: 12px 0 70px;
+  }
+
+  &__body {
+    max-width: 620px;
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 40px 0 14px;
+    }
+
+    p {
+      line-height: 1.7;
+      margin: 0 0 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .legal-panel {
+    &__header {
+      padding: 20px;
+    }
+
+    &__content {
+      padding: 30px 20px 60px;
+    }
+
+    h2 {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .legal-overlay,
+  .legal-overlay__backdrop,
+  .legal-panel {
+    transition-duration: 0s;
+  }
 }
