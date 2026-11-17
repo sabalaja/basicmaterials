@@ -1047,5 +1047,26 @@ body.overlay-open {
     transition-duration: 0s;
   }
 }
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.language-switcher button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  opacity: 0.4;
+  cursor: pointer;
+}
+.language-switcher button[aria-pressed=true] {
+  opacity: 1;
+  font-weight: 600;
+}
+.language-switcher button:hover {
+  opacity: 1;
+}
 
 /*# sourceMappingURL=style.css.map */
