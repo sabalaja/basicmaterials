@@ -1,7 +1,6 @@
-
 const glitchBlocks = document.querySelectorAll(".component-block");
 const reducedAnimationsMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
+  "(prefers-reduced-motion: reduce)",
 );
 
 let glitchTimeout;
@@ -20,7 +19,7 @@ function triggerGlitch(block) {
 
 function scheduleGlitch() {
   const delay = 1000 + Math.random() * 1500;
-console.log("GLITCH JS LOADED", glitchBlocks);
+  console.log("GLITCH JS LOADED", glitchBlocks);
   glitchTimeout = setTimeout(() => {
     if (!document.hidden && glitchBlocks.length) {
       const block =

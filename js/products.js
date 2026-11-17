@@ -252,3 +252,20 @@ document.addEventListener("keydown", (event) => {
     changeGalleryImage(1);
   }
 });
+const contactBtn = document.querySelector("#product-contact-btn");
+const contactSection = document.querySelector("#contact");
+
+contactBtn?.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  closeProduct();
+
+  const duration = reducedMotion.matches ? 0 : 700;
+
+  setTimeout(() => {
+    contactSection?.scrollIntoView({
+      behavior: reducedMotion.matches ? "instant" : "smooth",
+      block: "start",
+    });
+  }, duration);
+});

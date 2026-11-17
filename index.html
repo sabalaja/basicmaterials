@@ -9,7 +9,7 @@
     />
     <title>basic materials</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
@@ -62,13 +62,15 @@
       </section>
 
       <section
-        class="panel panel-products"
+        class="panel panel-products section-panel"
         id="products"
         aria-labelledby="products-title"
       >
-        <div class="panel-content">
+        <div class="panel-content second-column">
           <p class="eyebrow">01 / collection</p>
           <h2 id="products-title">products</h2>
+        </div>
+        <div class="panel-content main-view">
           <div class="products-grid">
             <article
               class="product-card"
@@ -98,85 +100,95 @@
       </section>
 
       <section
-        class="panel panel-about"
+        class="panel panel-about section-panel"
         id="about"
         aria-labelledby="about-title"
       >
-        <div class="panel-content text-content">
+        <div class="panel-content second-column">
           <p class="eyebrow">02 / studio</p>
           <h2 id="about-title">about</h2>
-          <p>
-            Basic Materials is a studio exploring objects, materials and form.
-          </p>
-          <p>More information coming soon.</p>
         </div>
-
-        <div class="panel-content components-animations">
-          <!-- ROCK -->
-          <div class="component-block">
-            <div class="animation-visual">
-              <img
-                src="./assets/info_animations/rock.gif"
-                alt="Rotating rock"
-                class="product-animation"
-              />
-              <div class="glitch-layer glitch-layer--red" aria-hidden="true">
-                <img src="./assets/info_animations/rock.gif" alt="" />
+        <div class="main-view">
+          <p>
+            <strong>BASIC MATERIALS</strong>
+          </p>
+          <p>
+            Jesteśmy niezależnym studiem projektowym i producentem autorskich
+            form użytkowych z Krakowa.<br/>
+            Łączymy procesy przemysłowe z rzemiosłem, poszukując równowagi
+            między technologią, formą i materiałem.<br/>
+            Projektujemy i produkujemy we własnym studio, dbając o każdy etap i
+            detal powstawania produktu.
+          </p>
+          <p>Designed and made in Kraków, Poland.</p>
+          <div class="panel-content components-animations">
+            <!-- ROCK -->
+            <div class="component-block">
+              <div class="animation-visual">
+                <img
+                  src="./assets/info_animations/rock.gif"
+                  alt="Rotating rock"
+                  class="product-animation"
+                />
+                <div class="glitch-layer glitch-layer--red" aria-hidden="true">
+                  <img src="./assets/info_animations/rock.gif" alt="" />
+                </div>
+                <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
+                  <img src="./assets/info_animations/rock.gif" alt="" />
+                </div>
               </div>
-              <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
-                <img src="./assets/info_animations/rock.gif" alt="" />
-              </div>
+              <p class="animation-caption">stone</p>
             </div>
-            <p class="animation-caption">rock</p>
-          </div>
 
-          <!-- WATER -->
-          <div class="component-block">
-            <div class="animation-visual">
-              <img
-                src="./assets/info_animations/water.gif"
-                alt="Rotating water"
-                class="product-animation"
-              />
-              <div class="glitch-layer glitch-layer--red" aria-hidden="true">
-                <img src="./assets/info_animations/water.gif" alt="" />
+            <!-- WATER -->
+            <div class="component-block">
+              <div class="animation-visual img-smaller">
+                <img
+                  src="./assets/info_animations/water.gif"
+                  alt="Rotating water"
+                  class="product-animation"
+                />
+                <div class="glitch-layer glitch-layer--red" aria-hidden="true">
+                  <img src="./assets/info_animations/water.gif" alt="" />
+                </div>
+                <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
+                  <img src="./assets/info_animations/water.gif" alt="" />
+                </div>
               </div>
-              <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
-                <img src="./assets/info_animations/water.gif" alt="" />
-              </div>
+              <p class="animation-caption">aluminium</p>
             </div>
-            <p class="animation-caption">water</p>
-          </div>
 
-          <!-- GLASS -->
-          <div class="component-block">
-            <div class="animation-visual">
-              <img
-                src="./assets/info_animations/glass.gif"
-                alt="Rotating glass"
-                class="product-animation"
-              />
-              <div class="glitch-layer glitch-layer--red" aria-hidden="true">
-                <img src="./assets/info_animations/glass.gif" alt="" />
+            <!-- GLASS -->
+            <div class="component-block">
+              <div class="animation-visual img-smallest">
+                <img
+                  src="./assets/info_animations/glass.gif"
+                  alt="Rotating glass"
+                  class="product-animation"
+                />
+                <div class="glitch-layer glitch-layer--red" aria-hidden="true">
+                  <img src="./assets/info_animations/glass.gif" alt="" />
+                </div>
+                <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
+                  <img src="./assets/info_animations/glass.gif" alt="" />
+                </div>
               </div>
-              <div class="glitch-layer glitch-layer--cyan" aria-hidden="true">
-                <img src="./assets/info_animations/glass.gif" alt="" />
-              </div>
+              <p class="animation-caption">glass</p>
             </div>
-            <p class="animation-caption">glass</p>
           </div>
         </div>
       </section>
 
       <section
-        class="panel panel-contact"
+        class="panel panel-contact section-panel"
         id="contact"
         aria-labelledby="contact-title"
       >
-        <div class="panel-content text-content">
+        <div class="panel-content second-column">
           <p class="eyebrow">03 / get in touch</p>
           <h2 id="contact-title">contact</h2>
-
+        </div>
+        <div class="main-view">
           <form
             id="contact-form"
             action="https://formspree.io/f/mljjkglk"
@@ -231,8 +243,8 @@
               <button type="submit" class="form-submit">SEND MESSAGE ↗</button>
             </div>
           </form>
-
-          <a class="contact-email" href="mailto:contact@basicmaterials.studio"
+          <!-- TODO: znelźć na to miejsce -->
+          <!-- <a class="contact-email" href="mailto:contact@basicmaterials.studio"
             >contact@basicmaterials.studio</a
           >
           <button
@@ -247,7 +259,7 @@
             target="_blank"
             rel="noopener noreferrer"
             >instagram ↗</a
-          >
+          > -->
           <p class="copy-status" role="status" aria-live="polite"></p>
         </div>
       </section>
@@ -274,7 +286,7 @@
         <!-- LEFT: IMAGE -->
         <div class="product-detail__visual">
           <div class="product-detail__topline">
-            <span>01 · 1:1 SCALE</span>
+            <span>01</span>
             <span>PHOTO / STUDIO</span>
           </div>
 
@@ -360,8 +372,7 @@
               </div>
 
               <a
-                id="product-enquiry"
-                href="mailto:contact@basicmaterials.studio"
+                id="product-contact-btn"
                 class="product-detail__cta"
               >
                 ENQUIRE ABOUT PRODUCT ↗

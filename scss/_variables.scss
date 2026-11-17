@@ -3,9 +3,9 @@
  // TYPOGRAPHY
  // ==========================================
 
- $font-main: "Courier Prime", monospace;
+ $font-main: "Inter", sans-serif;
 
- $h1_font-size:20px;
+ $h1_font-size: 20px;
 
 $h1_font-weight: 200;
 
@@ -44,7 +44,7 @@ $h1_font-weight: 200;
  $mobile-breakpoint: 700px;
 
  $padding-header: clamp(20px, 5vw, 80px);
- $padding-panel: clamp(20px, 7vw, 110px);
+ $padding-panel: clamp(20px, 2vw, 110px);
 
 
  // ==========================================
